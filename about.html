@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en" class="lenis scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pushpam Ayurveda Wellness Centre, JP Nagar, Bangalore, led by Dr. Mahathi Sahukar, BAMS, MD(Ayu). Named after her grandmother Pushpa. Personalized Ayurvedic treatment rooted in classical principles.">
+    <title>About Pushpam Ayurveda Wellness Centre | Ayurvedic Clinic/hospital in JP Nagar, Bangalore</title>
+    
+    
+    <link rel="icon" href="./Pushpam Logo.svg" type="image/svg+xml">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+    
+    <!-- Icons (Lucide) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- GSAP & Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Cormorant Garamond"', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            darkest: '#161413',
+                            deep: '#221f1e',
+                            leaf: '#A86728',
+                            sage: '#89a397',
+                            gold: '#A86728',
+                            'gold-light': '#f5ebe6',
+                            'cream-light': '#f3f7f5',
+                            'cream-sand': '#e1eae6',
+                            charcoal: '#221f1e',
+                            'charcoal-muted': '#5c7067',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-cream-light text-brand-charcoal antialiased selection:bg-brand-gold selection:text-brand-darkest">
+
+    <!-- Custom Cursor Nodes -->
+    <div id="custom-cursor" class="hidden md:block" aria-hidden="true"></div>
+    <div id="custom-cursor-ring" class="hidden md:block" aria-hidden="true"></div>
+
+    <!-- Fine Paper Grain Texture -->
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <!-- MOBILE NAVIGATION OVERLAY (GSAP Drawer) -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 bg-brand-darkest/95 backdrop-blur-lg flex flex-col justify-between p-8 translate-x-full pointer-events-none" aria-hidden="true" inert>
+        <div class="flex justify-between items-center">
+            <a href="pushpam_home_page.html" class="cursor-pointer-target" aria-label="Pushpam Ayurveda home">
+                <img src="./Pushpam Logo Horizontal Dark.svg" alt="Pushpam Ayurveda Wellness Centre Logo" class="h-14 w-auto object-contain">
+            </a>
+            <button type="button" id="close-menu-btn" aria-label="Close menu" class="p-3 bg-brand-leaf/40 text-brand-gold rounded-full border border-brand-gold/20 cursor-pointer-target">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <div class="flex flex-col space-y-6 text-3xl font-display text-brand-gold-light mt-12" role="navigation" aria-label="Mobile navigation">
+            <a href="pushpam_home_page.html" class="mobile-nav-link hover:text-brand-gold transition-colors cursor-pointer-target">Home</a>
+            <a href="about.html" class="mobile-nav-link hover:text-brand-gold transition-colors cursor-pointer-target">About</a>
+            <a href="treatments.html" class="mobile-nav-link hover:text-brand-gold transition-colors cursor-pointer-target">Treatments</a>
+            <a href="doctors.html" class="mobile-nav-link hover:text-brand-gold transition-colors cursor-pointer-target">Doctors</a>
+            <a href="corporate-wellness.html" class="mobile-nav-link hover:text-brand-gold transition-colors cursor-pointer-target">Corporate Wellness</a>
+        </div>
+        <div class="flex flex-col space-y-4 pt-12 border-t border-brand-leaf/30">
+            <a href="tel:+919871731008" class="text-sm font-medium text-brand-sage hover:text-brand-gold transition-colors cursor-pointer-target flex items-center gap-2">
+                <i data-lucide="phone" class="w-4 h-4"></i> +91 98765 43210
+            </a>
+            <a href="#book" class="bg-brand-gold text-brand-darkest py-4 rounded-full text-center font-bold tracking-wide hover:bg-white transition-all cursor-pointer-target">
+                Book Consultation
+            </a>
+        </div>
+    </div>
+
+    <!-- NAVIGATION BAR -->
+    <nav id="navbar" aria-label="Primary" class="fixed w-full z-40 top-0 left-0 transition-all duration-500 py-6 border-b border-transparent">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center justify-between">
+            <a href="pushpam_home_page.html" class="flex items-center cursor-pointer-target" aria-label="Pushpam Ayurveda home">
+                <img src="./Pushpam Logo Horizontal Dark.svg" alt="Pushpam Ayurveda Wellness Centre Logo" class="h-14 w-auto object-contain">
+            </a>
+            
+            <div class="hidden lg:flex items-center space-x-10 text-[0.95rem] font-medium text-white/90">
+                <a href="pushpam_home_page.html" class="nav-link hover:text-brand-deep transition-colors cursor-pointer-target">Home</a>
+                <a href="about.html" class="nav-link text-brand-gold hover:text-brand-deep transition-colors cursor-pointer-target">About</a>
+                <a href="treatments.html" class="nav-link hover:text-brand-deep transition-colors cursor-pointer-target">Treatments</a>
+                <a href="doctors.html" class="nav-link hover:text-brand-deep transition-colors cursor-pointer-target">Doctors</a>
+                <a href="corporate-wellness.html" class="nav-link hover:text-brand-deep transition-colors cursor-pointer-target">Corporate Wellness</a>
+            </div>
+
+            <div class="hidden lg:flex items-center space-x-6">
+                <a href="tel:+919871731008" class="text-sm font-medium text-white/90 hover:text-brand-gold transition-colors cursor-pointer-target flex items-center gap-1.5">
+                    <i data-lucide="phone" class="w-4 h-4 text-brand-gold-light"></i> Call Clinic
+                </a>
+                <div class="btn-magnetic">
+                    <a href="#book" class="bg-brand-deep text-brand-gold-light px-10 py-[18px] rounded-full text-base font-semibold tracking-wide border border-brand-leaf hover:bg-brand-gold hover:text-brand-darkest hover:border-brand-gold transition-all duration-300 shadow-md shadow-brand-deep/10 cursor-pointer-target">
+                        Book Consultation
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button type="button" id="open-menu-btn" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false" class="lg:hidden p-3 text-brand-gold bg-brand-deep/60 hover:bg-brand-deep rounded-full transition-colors cursor-pointer-target">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HEADER / HERO -->
+    <section class="pt-40 pb-24 bg-gradient-to-br from-[#1b1918] via-[#221f1e] to-[#2d2927] border-b border-brand-gold/10 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: radial-gradient(circle at 1px 1px, var(--color-gold-accent) 1px, transparent 0); background-size: 24px 24px;"></div>
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12 text-center space-y-4 relative z-10 animate-fade-in">
+            <span class="text-xs font-bold tracking-widest text-brand-gold uppercase block">The Standard of Care</span>
+            <h1 class="text-4xl lg:text-6xl font-display font-medium text-white leading-[1.35]">
+                About Pushpam Ayurveda
+            </h1>
+        </div>
+    </section>
+
+    <!-- THE NAME (GRANDMOTHER STORY) -->
+    <section class="py-24 lg:py-32 bg-gradient-to-tr from-[#e1eae6]/20 via-[#f3f7f5] to-[#d3e3dd]/30 relative border-b border-brand-cream-sand/40">
+        <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                <!-- Story Content -->
+                <div class="lg:col-span-7 space-y-8">
+                    <span class="text-xs font-bold tracking-widest text-brand-gold uppercase block">The Heritage</span>
+                    <h2 class="text-3xl lg:text-5xl font-display font-medium text-brand-deep leading-[1.2]">
+                        The name Pushpam comes from a person.
+                    </h2>
+                    <div class="space-y-6 text-base sm:text-lg text-brand-charcoal-muted leading-relaxed font-light">
+                        <p>
+                            Dr. Mahathi Sahukar named this clinic after her grandmother, Pushpa, not because she was a doctor, but because she defined, in the simplest way, what real care looks like.
+                        </p>
+                        <p>
+                            Not hurried. Not mechanical. But patient. Attentive. Deeply present.
+                        </p>
+                        <p>
+                            In her presence, people felt looked after, not through medicine, but through the quality of attention she gave. That quiet way of caring left a lasting impression.
+                        </p>
+                        <p>
+                            Years later, when Dr. Mahathi built her own practice, she didn't want to create just another Ayurveda centre. She wanted to build a place where that same depth of attention becomes the foundation of healing, where patients are not just treated, but truly understood.
+                        </p>
+                        <p class="text-xl font-display text-brand-deep font-semibold italic border-l-2 border-brand-gold pl-4 pt-2">
+                            "So she named it Pushpam. Not as a story to tell, but as a standard to live by."
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Image Column -->
+                <div class="lg:col-span-5 relative">
+                    <div class="aspect-[4/5] rounded-[3.5rem] overflow-hidden bg-brand-cream-sand relative border-[12px] border-white shadow-xl">
+                        <img src="./ayurveda_heritage.png" alt="Pushpam Ayurveda Heritage - Traditional Ayurvedic Ingredients and Heritage" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MESSAGE FROM DR. MAHATHI -->
+    <section class="py-24 lg:py-32 bg-gradient-to-br from-[#f3f7f5] via-[#e6eee9] to-[#d6e5de] border-y border-brand-cream-sand/40">
+        <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-5 relative">
+                    <div class="aspect-[4/5] rounded-[3.5rem] overflow-hidden bg-brand-cream-sand relative border-[12px] border-white shadow-xl">
+                        <img src="./Mahathi Professional Headshot.png" alt="Dr. Mahathi Sahukar" class="object-cover w-full h-full scale-105">
+                    </div>
+                </div>
+                <div class="lg:col-span-7 space-y-8">
+                    <div>
+                        <span class="text-xs font-bold tracking-widest text-brand-gold uppercase block mb-3">Founder's Message</span>
+                        <h2 class="text-3xl lg:text-4xl font-display font-medium text-brand-darkest">A Message from Dr. Mahathi</h2>
+                    </div>
+                    <div class="space-y-6 text-base text-brand-charcoal-muted leading-relaxed font-light">
+                        <p>
+                            I started learning about Ayurveda in the ninth grade. Most people decide what they want to do much later. I got lucky. It found me early.
+                        </p>
+                        <p>
+                            What drew me in wasn't the theory. It was the logic. Ayurveda asks a different question: not just what is the disease, but why is this person's body out of balance? What are they eating, how are they sleeping, what does their digestion look like? The answers to those questions tell you far more than a test result.
+                        </p>
+                        <p class="font-medium text-brand-deep italic">
+                            My practice is built on one belief: food is medicine. The body, given the right conditions, knows how to heal. Most of what I do is remove the obstacles and give the body what it needs to do what it already wants to do.
+                        </p>
+                    </div>
+                    <div class="border-t border-brand-cream-sand/80 pt-6">
+                        <h5 class="font-display font-bold text-lg text-brand-deep">Dr. Mahathi Sahukar, BAMS, MD(Ayu)</h5>
+                        <p class="text-xs text-brand-charcoal-muted mt-0.5">Founder & Managing Director, Pushpam Ayurveda Wellness Centre</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHILOSOPHY OF CARE -->
+    <section class="py-24 lg:py-32 bg-gradient-to-b from-white via-[#f3f7f5] to-white relative">
+        <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-20">
+                <span class="text-xs font-bold tracking-widest text-brand-gold uppercase">Our Method</span>
+                <h2 class="text-4xl lg:text-5xl font-display font-medium text-brand-darkest">Our Philosophy of Care</h2>
+                <p class="text-base text-brand-charcoal-muted font-light leading-relaxed">
+                    Ayurveda doesn't treat a disease. It treats the person who has the disease.
+                </p>
+            </div>
+ 
+            <!-- Visual Block: We Assess -> We Design -> We Guide -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="bg-gradient-to-br from-white to-[#f3f7f5] p-8 rounded-3xl border border-brand-gold/15 shadow-md shadow-brand-deep/5 space-y-4 hover:border-brand-gold/40 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-deep mx-auto">
+                        <i data-lucide="search" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-display text-xl font-bold text-brand-deep">We Assess</h4>
+                    <p class="text-xs text-brand-charcoal-muted leading-relaxed">
+                        We analyze your baseline constitution (Prakriti), current imbalances (Vikriti), digestion strength, and stress routines over detailed consultations.
+                    </p>
+                </div>
+                <div class="bg-gradient-to-br from-white to-[#f3f7f5] p-8 rounded-3xl border border-brand-gold/15 shadow-md shadow-brand-deep/5 space-y-4 hover:border-brand-gold/40 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-deep mx-auto">
+                        <i data-lucide="layers" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-display text-xl font-bold text-brand-deep">We Design</h4>
+                    <p class="text-xs text-brand-charcoal-muted leading-relaxed">
+                        We build a personal roadmap consisting of classical formulations, supervised clinical therapies, and diet protocols matching your recovery timeline.
+                    </p>
+                </div>
+                <div class="bg-gradient-to-br from-white to-[#f3f7f5] p-8 rounded-3xl border border-brand-gold/15 shadow-md shadow-brand-deep/5 space-y-4 hover:border-brand-gold/40 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-deep mx-auto">
+                        <i data-lucide="compass" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-display text-xl font-bold text-brand-deep">We Guide</h4>
+                    <p class="text-xs text-brand-charcoal-muted leading-relaxed">
+                        We support you with habit modifications and progressive check-ups to lock in your metabolic recovery and safeguard against future flares.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT PATIENTS CONSISTENTLY SAY -->
+    <section class="py-24 lg:py-32 bg-gradient-to-tr from-[#e1eae6]/20 via-[#f3f7f5] to-[#d3e3dd]/30 border-y border-brand-cream-sand/40">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+            <div class="max-w-3xl mb-16">
+                <span class="text-xs font-bold tracking-widest text-brand-gold uppercase block mb-4">Patient Experiences</span>
+                <h2 class="text-4xl lg:text-5xl font-display font-medium text-brand-darkest">What Patients Consistently Say</h2>
+            </div>
+ 
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gradient-to-br from-white to-[#f3f7f5] p-8 rounded-[2rem] border border-brand-gold/15 shadow-md shadow-brand-deep/5 space-y-4 hover:border-brand-gold/40 transition-all duration-300">
+                    <h4 class="font-display text-xl font-bold text-brand-deep">She explains everything</h4>
+                    <p class="text-xs text-brand-charcoal-muted leading-relaxed font-light">
+                        Dr. Mahathi explains the logic behind every step. Patients leave knowing why they are taking a medicine, what a therapy is doing, and what to expect. That transparency is what makes people follow through.
+                    </p>
+                </div>
+                <div class="bg-gradient-to-br from-white to-[#f3f7f5] p-8 rounded-[2rem] border border-brand-gold/15 shadow-md shadow-brand-deep/5 space-y-4 hover:border-brand-gold/40 transition-all duration-300">
+                    <h4 class="font-display text-xl font-bold text-brand-deep">She takes her time</h4>
+                    <p class="text-xs text-brand-charcoal-muted leading-relaxed font-light">
+                        Consultations aren't 10 minutes. If you've felt rushed through a medical appointment before and left with more questions than answers, this will feel different.
+                    </p>
+                </div>
+                <div class="bg-gradient-to-br from-white to-[#f3f7f5] p-8 rounded-[2rem] border border-brand-gold/15 shadow-md shadow-brand-deep/5 space-y-4 hover:border-brand-gold/40 transition-all duration-300">
+                    <h4 class="font-display text-xl font-bold text-brand-deep">Classical therapies</h4>
+                    <p class="text-xs text-brand-charcoal-muted leading-relaxed font-light">
+                        Panchakarma at spas is a wellness service. At Pushpam, it's a clinical intervention: prescribed by a doctor, supervised throughout. There's a difference.
+                    </p>
+                </div>
+                <div class="bg-gradient-to-br from-white to-[#f3f7f5] p-8 rounded-[2rem] border border-brand-gold/15 shadow-md shadow-brand-deep/5 space-y-4 hover:border-brand-gold/40 transition-all duration-300">
+                    <h4 class="font-display text-xl font-bold text-brand-deep">Honest assessment</h4>
+                    <p class="text-xs text-brand-charcoal-muted leading-relaxed font-light">
+                        She won't tell you Ayurveda cures everything. She'll give you an honest assessment and realistic expectations. Patients appreciate that.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE CLINIC / HOSPITAL -->
+    <section class="py-24 lg:py-32 bg-gradient-to-b from-[#f3f7f5] to-white relative">
+        <div class="max-w-[1000px] mx-auto px-6 text-center space-y-8">
+            <span class="text-xs font-bold tracking-widest text-brand-gold uppercase block">The Space</span>
+            <h2 class="text-3xl lg:text-4xl font-display font-medium text-brand-darkest">The Clinic & Care Team</h2>
+            <p class="text-base text-brand-charcoal-muted leading-relaxed font-light max-w-2xl mx-auto">
+                Pushpam Ayurveda is in JP Nagar, Bangalore. Clean, calm, and clinical. Not a spa. The therapy team, including therapists Adithya, Suchitra, and Vaishnavi, are trained and attentive. A few patients have travelled from Germany, Mauritius, US, Switzerland, etc., specifically to be treated here.
+            </p>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section id="book" class="py-20 bg-brand-deep text-brand-gold-light text-center border-t border-brand-leaf relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 relative z-10 space-y-8">
+            <h2 class="text-4xl lg:text-5xl font-display font-medium">Ready to Begin Your Healing?</h2>
+            <p class="text-base text-brand-cream-sand/80 max-w-xl mx-auto font-light">
+                The best way to start is a consultation. Dr. Mahathi will look at your case and tell you honestly what she thinks.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                <div class="btn-magnetic">
+                    <a href="pushpam_home_page.html#book" class="bg-brand-gold text-brand-darkest px-12 py-[22px] rounded-full font-bold text-base sm:text-lg hover:bg-white transition-all cursor-pointer-target">
+                        Book a Consultation
+                    </a>
+                </div>
+                <div class="btn-magnetic">
+                    <a href="treatments.html" class="bg-brand-leaf text-white px-12 py-[22px] rounded-full font-bold text-base sm:text-lg hover:bg-brand-gold hover:text-brand-darkest border border-brand-gold/30 transition-all cursor-pointer-target">
+                        See Conditions We Treat
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-darkest text-brand-gold-light pt-24 pb-8 relative overflow-hidden">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-16 mb-20">
+                <div class="space-y-6">
+                    <a href="pushpam_home_page.html" class="cursor-pointer-target" aria-label="Pushpam Ayurveda home">
+                        <img src="./Pushpam Logo Horizontal Dark.svg" alt="Pushpam Ayurveda Wellness Centre Logo" class="h-16 w-auto object-contain">
+                    </a>
+                    <p class="text-xs text-brand-sage leading-relaxed max-w-xs">
+                        An elite Ayurvedic corrective clinic specializing in systemic stabilization programs for chronic musculoskeletal, skin and metabolic conditions.
+                    </p>
+                </div>
+                <div class="space-y-6">
+                    <h4 class="font-display text-lg font-semibold text-brand-gold">Clinical Focus</h4>
+                    <ul class="space-y-3 text-xs text-brand-sage font-medium">
+                        <li><a href="treatments.html" class="hover:text-brand-gold transition-colors cursor-pointer-target">Chronic Pain & Spine Care</a></li>
+                        <li><a href="treatments.html" class="hover:text-brand-gold transition-colors cursor-pointer-target">PCOD Reversal & Skin Relief</a></li>
+                        <li><a href="treatments.html" class="hover:text-brand-gold transition-colors cursor-pointer-target">Digestive Reset & Detox</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-6">
+                    <h4 class="font-display text-lg font-semibold text-brand-gold">Organisation</h4>
+                    <ul class="space-y-3 text-xs text-brand-sage font-medium">
+                        <li><a href="about.html" class="hover:text-brand-gold transition-colors cursor-pointer-target">About Dr. Mahathi</a></li>
+                        <li><a href="treatments.html" class="hover:text-brand-gold transition-colors cursor-pointer-target">Panchakarma Detox</a></li>
+                        <li><a href="corporate-wellness.html" class="hover:text-brand-gold transition-colors cursor-pointer-target">Corporate Wellness</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-6">
+                    <h4 class="font-display text-lg font-semibold text-brand-gold">Clinic Hours</h4>
+                    <ul class="space-y-3 text-xs text-brand-sage font-medium">
+                        <li>Mon - Sat: 09:00 AM - 07:00 PM</li>
+                        <li>Sunday: Prior Appointment Only</li>
+                        <li>Telephone: +91 98765 43210</li>
+                    </ul>
+                </div>
+
+                <!-- Find Us Map Column -->
+                <div class="space-y-6">
+                    <h4 class="font-display text-lg font-semibold text-brand-gold">Find Us</h4>
+                    <div class="overflow-hidden rounded-2xl border border-brand-gold/20 shadow-md shadow-brand-deep/5 aspect-[4/3] bg-brand-deep/20">
+                        <iframe title="Google Map - Pushpam Ayurveda Wellness Centre, JP Nagar, Bangalore" src="https://www.google.com/maps?q=Pushpam%20Ayurveda%20Wellness%20Centre%20JP%20Nagar%20Bangalore&output=embed" class="w-full h-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                    </div>
+                    <a href="https://maps.app.goo.gl/yih5ZbYP4ES6hFcU9" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-gold hover:text-brand-gold-light transition-colors cursor-pointer-target">
+                        Open in Google Maps <i data-lucide="external-link" class="w-4 h-4" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-brand-leaf/30 py-6 text-center text-sm text-brand-sage/70 font-semibold gap-x-3 gap-y-2 flex flex-wrap justify-center items-center">
+                <a href="pushpam_home_page.html" class="hover:text-brand-gold transition-colors cursor-pointer-target">Ayurvedic Clinic JP Nagar Bangalore</a>
+                <span>|</span>
+                <a href="treatments.html" class="hover:text-brand-gold transition-colors cursor-pointer-target">Ayurvedic treatment for chronic pain in Bangalore</a>
+                <span>|</span>
+                <a href="treatments.html" class="hover:text-brand-gold transition-colors cursor-pointer-target">PCOD Ayurveda treatment Bangalore</a>
+                <span>|</span>
+                <a href="treatments.html" class="hover:text-brand-gold transition-colors cursor-pointer-target">Thyroid treatment Ayurveda Bangalore</a>
+            </div>
+
+            <div class="border-t border-brand-leaf/20 py-4 text-sm text-brand-sage/60 leading-relaxed text-center max-w-4xl mx-auto">
+                Disclaimer: Ayurvedic treatment is not a substitute for emergency medical care. Results vary based on individual conditions.
+            </div>
+
+            <div class="border-t border-brand-leaf/30 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-brand-sage/75">
+                <p>&copy; 2026 Pushpam Ayurveda Wellness Centre. All rights reserved.</p>
+                <div class="flex gap-6 font-semibold">
+                    <span class="text-brand-sage/70">Privacy Statement</span>
+                    <span class="text-brand-sage/70">Terms of Service</span>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        lucide.createIcons({ attrs: { 'aria-hidden': 'true' } });
+
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            touchMultiplier: 2
+        });
+
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000);
+        });
+        gsap.ticker.lagSmoothing(0);
+
+        /* CUSTOM CURSOR SYSTEM */
+        const cursor = document.getElementById('custom-cursor');
+        const cursorRing = document.getElementById('custom-cursor-ring');
+        let mouseX = 0, mouseY = 0;
+        let ringX = 0, ringY = 0;
+        
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            gsap.set(cursor, { x: mouseX, y: mouseY });
+        });
+
+        gsap.ticker.add(() => {
+            ringX += (mouseX - ringX) * 0.15;
+            ringY += (mouseY - ringY) * 0.15;
+            gsap.set(cursorRing, { x: ringX, y: ringY });
+        });
+
+        const targets = document.querySelectorAll('.cursor-pointer-target, a, button, input, select, textarea');
+        targets.forEach(t => {
+            t.addEventListener('mouseenter', () => { document.body.classList.add('cursor-hover'); });
+            t.addEventListener('mouseleave', () => { document.body.classList.remove('cursor-hover'); });
+        });
+
+        document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
+            const currentFile = window.location.pathname.split('/').pop() || 'pushpam_home_page.html';
+            const linkFile = link.getAttribute('href').split('#')[0];
+            if (linkFile === currentFile) {
+                link.setAttribute('aria-current', 'page');
+            }
+        });
+
+        /* NAVBAR DYNAMIC GLASS EFFECT */
+        const navbar = document.getElementById('navbar');
+        const navLogo = navbar.querySelector('img');
+        const navLinksContainer = navbar.querySelector('.lg\\:flex.items-center.space-x-10');
+        const phoneLink = navbar.querySelector('a[href^="tel:"]');
+        const callIcon = phoneLink.querySelector('svg, i');
+        const menuBtn = document.getElementById('open-menu-btn');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-brand-cream-light/80', 'backdrop-blur-md', 'shadow-sm', 'border-brand-cream-sand/40', 'py-4');
+                navbar.classList.remove('py-6', 'border-transparent');
+                
+                // Scrolled: light background, dark logo/text
+                navLogo.src = './Pushpam Logo Horizontal Light.svg';
+                navLinksContainer.classList.add('text-brand-charcoal-muted');
+                navLinksContainer.classList.remove('text-white/90');
+                
+                // Adjust current active links
+                const activeLink = navLinksContainer.querySelector('.text-brand-gold');
+                if (activeLink) {
+                    activeLink.classList.remove('text-brand-gold');
+                    activeLink.classList.add('text-brand-deep');
+                }
+                
+                phoneLink.classList.add('text-brand-deep');
+                phoneLink.classList.remove('text-white/90');
+                if (callIcon) callIcon.classList.add('text-brand-gold');
+                if (callIcon) callIcon.classList.remove('text-brand-gold-light');
+                
+                menuBtn.classList.remove('text-brand-gold', 'bg-brand-deep/60');
+                menuBtn.classList.add('text-brand-deep', 'bg-brand-cream-sand/60');
+            } else {
+                navbar.classList.remove('bg-brand-cream-light/80', 'backdrop-blur-md', 'shadow-sm', 'border-brand-cream-sand/40', 'py-4');
+                navbar.classList.add('py-6', 'border-transparent');
+                
+                // Unscrolled: dark background, white/gold logo/text
+                navLogo.src = './Pushpam Logo Horizontal Dark.svg';
+                navLinksContainer.classList.remove('text-brand-charcoal-muted');
+                navLinksContainer.classList.add('text-white/90');
+                
+                // Adjust current active links
+                const activeLink = navLinksContainer.querySelector('.text-brand-deep');
+                if (activeLink) {
+                    activeLink.classList.remove('text-brand-deep');
+                    activeLink.classList.add('text-brand-gold');
+                }
+                
+                phoneLink.classList.remove('text-brand-deep');
+                phoneLink.classList.add('text-white/90');
+                if (callIcon) callIcon.classList.remove('text-brand-gold');
+                if (callIcon) callIcon.classList.add('text-brand-gold-light');
+                
+                menuBtn.classList.add('text-brand-gold', 'bg-brand-deep/60');
+                menuBtn.classList.remove('text-brand-deep', 'bg-brand-cream-sand/60');
+            }
+        });
+
+        /* MOBILE MENU DRAWER */
+        const mobileMenu = document.getElementById('mobile-menu');
+        const openMenuBtn = document.getElementById('open-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+        const mobileFocusable = mobileMenu.querySelectorAll('a, button');
+        mobileMenu.inert = true;
+        let lastFocusedElement = null;
+
+        const menuTl = gsap.timeline({ paused: true });
+        menuTl.to(mobileMenu, { x: 0, duration: 0.45, ease: "power3.inOut" })
+              .from(mobileLinks, { x: 24, opacity: 0, stagger: 0.06, duration: 0.25, ease: "power2.out" }, "-=0.1");
+
+        const openMenuAction = () => {
+            lastFocusedElement = document.activeElement;
+            mobileMenu.style.pointerEvents = 'auto';
+            mobileMenu.setAttribute('aria-hidden', 'false');
+            mobileMenu.inert = false;
+            openMenuBtn.setAttribute('aria-expanded', 'true');
+            document.body.classList.add('mobile-menu-open');
+            menuTl.play(0);
+            lenis.stop();
+            setTimeout(() => closeMenuBtn.focus(), 80);
+        };
+
+        const closeMenuAction = () => {
+            mobileMenu.setAttribute('aria-hidden', 'true');
+            openMenuBtn.setAttribute('aria-expanded', 'false');
+            document.body.classList.remove('mobile-menu-open');
+            menuTl.reverse();
+            setTimeout(() => {
+                mobileMenu.style.pointerEvents = 'none';
+                mobileMenu.inert = true;
+                if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+                    lastFocusedElement.focus();
+                }
+            }, 450);
+            lenis.start();
+        };
+
+        openMenuBtn.addEventListener('click', openMenuAction);
+        closeMenuBtn.addEventListener('click', closeMenuAction);
+        mobileLinks.forEach(link => link.addEventListener('click', closeMenuAction));
+        document.addEventListener('keydown', (event) => {
+            if (mobileMenu.getAttribute('aria-hidden') === 'true') return;
+            if (event.key === 'Escape') {
+                closeMenuAction();
+                return;
+            }
+            if (event.key !== 'Tab' || mobileFocusable.length === 0) return;
+            const first = mobileFocusable[0];
+            const last = mobileFocusable[mobileFocusable.length - 1];
+            if (event.shiftKey && document.activeElement === first) {
+                event.preventDefault();
+                last.focus();
+            } else if (!event.shiftKey && document.activeElement === last) {
+                event.preventDefault();
+                first.focus();
+            }
+        });
+    </script>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/919871731008" target="_blank" rel="noopener noreferrer" class="whatsapp-float fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:bg-[#20ba56] active:scale-95 transition-colors duration-300 flex items-center justify-center group cursor-pointer-target" aria-label="Chat on WhatsApp">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" class="w-7 h-7 fill-white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.438 2.5 1.177 3.464L6.96 17.585l2.25-.737c.895.547 1.942.862 3.061.862 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm3.39 8.163c-.15.424-.755.764-1.042.812-.249.043-.572.077-1.574-.337-1.278-.53-2.083-1.81-2.147-1.896-.063-.086-.511-.68-.511-1.296 0-.616.323-.918.439-1.04.116-.123.254-.154.339-.154.086 0 .17.001.244.005.078.004.18-.03.282.214.106.255.362.882.394.945.032.064.053.138.01.223-.042.086-.064.138-.127.213-.064.074-.133.165-.191.223-.064.064-.13.133-.056.26.074.123.33 1.353 1.054 1.996.619.549 1.141.718 1.3.785.16.069.255.059.35-.053.097-.112.414-.483.525-.648.112-.165.223-.138.377-.08.154.058.977.461 1.147.546.17.085.282.127.324.197.042.07.042.404-.108.828zM12 2C6.477 2 2 6.477 2 12c0 1.768.458 3.431 1.263 4.887L2 22l5.258-1.222C8.655 21.56 10.274 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.477 0-2.88-.383-4.108-1.054l-.294-.162-3.053.71.722-2.635-.19-.301A7.954 7.954 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/>
+        </svg>
+        <span class="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 text-sm font-semibold tracking-wide whitespace-nowrap transition-all duration-300">
+            Chat with us
+        </span>
+    </a>
+</body>
+</html>

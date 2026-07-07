@@ -1,0 +1,435 @@
+﻿/* 
+   PUSHPAM CLINIC - PREMIUM DESIGN SYSTEM
+   Custom CSS for Luxury Wellness Aesthetic & GSAP Animations
+*/
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+    /* Color Palette */
+    --color-forest-darkest: #161413; /* Deep luxury charcoal black */
+    --color-forest-deep: #221f1e;    /* Main brand black/charcoal */
+    --color-forest-leaf: #A86728;    /* Rich clay brown */
+    --color-forest-sage: #89a397;    /* Soft glacial green */
+    --color-gold-accent: #A86728;    /* Accent brown */
+    --color-gold-light: #f5ebe6;     /* Warm linen highlight */
+    --color-cream-light: #f3f7f5;    /* Light glacial green background */
+    --color-cream-sand: #e1eae6;     /* Glacial sand */
+    --color-charcoal-dark: #221f1e;  /* Deep off-black text */
+    --color-charcoal-muted: #5c7067; /* Muted glacial green-charcoal text */
+
+    /* Typography */
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Custom Scrollbar - Minimal & Elegant */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: var(--color-cream-light);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-gold-accent);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-forest-sage);
+}
+
+/* Base Adjustments */
+html {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-sans);
+    color: var(--color-charcoal-dark);
+    background-color: var(--color-cream-light);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+img, picture, video, canvas, svg {
+    max-width: 100%;
+}
+
+a, button, input, textarea, select {
+    font: inherit;
+}
+
+button, a {
+    -webkit-tap-highlight-color: rgba(168, 103, 40, 0.18);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+iframe:focus-visible {
+    outline: 3px solid var(--color-gold-accent);
+    outline-offset: 4px;
+    border-radius: 0.75rem;
+}
+
+button:disabled,
+[aria-disabled="true"] {
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6, .font-serif {
+    font-family: var(--font-serif);
+}
+
+/* Lenis Smooth Scroll Configuration */
+html.lenis, html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+/* Custom Premium Cursor */
+#custom-cursor {
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-gold-accent);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+#custom-cursor-ring {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(168, 103, 40, 0.4);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9998;
+    transition: width 0.3s cubic-bezier(0.1, 0.8, 0.3, 1), 
+                height 0.3s cubic-bezier(0.1, 0.8, 0.3, 1), 
+                border-color 0.3s, background-color 0.3s;
+}
+
+/* Hover effects for custom cursor */
+body.cursor-hover #custom-cursor {
+    width: 4px;
+    height: 4px;
+    background-color: #ffffff;
+}
+
+body.cursor-hover #custom-cursor-ring {
+    width: 60px;
+    height: 60px;
+    border-color: var(--color-gold-accent);
+    background-color: rgba(168, 103, 40, 0.15);
+}
+
+/* Media/Play button hover cursor */
+body.cursor-play-hover #custom-cursor {
+    opacity: 0;
+}
+
+body.cursor-play-hover #custom-cursor-ring {
+    width: 80px;
+    height: 80px;
+    border-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.cursor-play-hover #custom-cursor-ring::after {
+    content: 'PLAY';
+    color: #ffffff;
+    font-size: 10px;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
+
+body.cursor-playing-hover #custom-cursor-ring::after {
+    content: 'MUTE';
+}
+
+/* Noise overlay for premium paper texture */
+.noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    content: "";
+    opacity: 0.02;
+    pointer-events: none;
+    z-index: 9990;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3e%3cfilter id='noiseFilter'%3e%3cfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3e%3c/filter%3e%3crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3e%3c/svg%3e");
+}
+
+/* GSAP Clip-Path Text Reveal utilities */
+.clip-container {
+    overflow: hidden;
+    display: inline-block;
+    padding-top: 0.15em;
+    padding-bottom: 0.25em;
+    vertical-align: bottom;
+}
+
+.clip-reveal {
+    display: block;
+    transform: translateY(115%);
+}
+
+/* Magnetic Button Wrapper */
+.btn-magnetic {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.btn-magnetic > a,
+.btn-magnetic > button,
+a[class*="rounded-full"],
+button[class*="rounded-full"] {
+    min-height: 44px;
+    text-align: center;
+    white-space: normal;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(1deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-float-slow {
+    animation: float 8s ease-in-out infinite;
+}
+
+/* Luxury Audio Player Custom Visuals */
+.audio-visualizer-container {
+    background: radial-gradient(circle at center, rgba(168, 103, 40, 0.3) 0%, rgba(22, 19, 18, 0) 70%);
+}
+
+.visualizer-canvas {
+    width: 100%;
+    height: 180px;
+    display: block;
+    border-radius: 1rem;
+}
+
+/* Subtle glowing pulse */
+.glow-pulse {
+    box-shadow: 0 0 0 0 rgba(168, 103, 40, 0.4);
+    animation: glow-pulse-ani 2s infinite;
+}
+
+@keyframes glow-pulse-ani {
+    0% {
+        box-shadow: 0 0 0 0 rgba(168, 103, 40, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(168, 103, 40, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(168, 103, 40, 0);
+    }
+}
+
+#mobile-menu {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding-top: max(2rem, env(safe-area-inset-top));
+    padding-bottom: max(2rem, env(safe-area-inset-bottom));
+}
+
+body.mobile-menu-open {
+    overflow: hidden;
+}
+
+.faq-trigger,
+.sound-preset-btn {
+    min-height: 44px;
+}
+
+.whatsapp-float {
+    width: 56px;
+    min-height: 56px;
+    max-width: calc(100vw - 2rem);
+    overflow: hidden;
+}
+
+.whatsapp-float svg,
+.whatsapp-float i {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 auto;
+}
+
+.tally-frame {
+    min-height: 560px;
+}
+
+@media (max-width: 767px) {
+    #custom-cursor,
+    #custom-cursor-ring {
+        display: none !important;
+    }
+
+    .visualizer-canvas {
+        height: 128px;
+    }
+
+    .sound-preset-btn {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+        line-height: 1.25;
+        overflow-wrap: anywhere;
+    }
+
+    .tally-frame {
+        min-height: 640px;
+    }
+
+    .whatsapp-float {
+        right: 1rem !important;
+        bottom: 1rem !important;
+        width: 52px !important;
+        min-height: 52px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0.875rem !important;
+    }
+
+    .whatsapp-float span {
+        display: none;
+    }
+}
+
+@media (max-width: 380px) {
+    .mobile-nav-link {
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+
+    .sound-preset-btn {
+        font-size: 0.625rem !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Custom form styling */
+.form-input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(82, 98, 87, 0.3);
+    padding: 0.75rem 0;
+    transition: border-color 0.3s ease;
+    font-size: 1.05rem;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-gold-accent);
+}
+
+.form-label {
+    position: absolute;
+    top: 0.75rem;
+    left: 0;
+    color: var(--color-charcoal-muted);
+    transition: transform 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+    pointer-events: none;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+    transform: translateY(-1.25rem);
+    font-size: 0.85rem;
+    color: var(--color-gold-accent);
+}
+
+/* Modern navigation items underline effect */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--color-gold-accent);
+    transform-origin: bottom right;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Custom style for luxury timeline */
+.timeline-dot::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 1px dashed rgba(168, 103, 40, 0.3);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}

@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en" class="lenis scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ayurvedic treatment at Pushpam Ayurveda, JP Nagar, Bangalore: disc pain, PCOD, thyroid, skin conditions, digestive disorders, stress. Personalized Panchakarma and herbal treatment.">
+    <title>Ayurvedic Treatment in JP Nagar, Bangalore | Panchakarma, Back Pain, PCOD, Skin | Pushpam Ayurveda</title>
+    
+    
+    <link rel="icon" href="./Pushpam Logo.svg" type="image/svg+xml">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+    
+    <!-- Icons (Lucide) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- GSAP & Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Cormorant Garamond"', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            darkest: '#161413',
+                            deep: '#221f1e',
+                            leaf: '#A86728',
+                            sage: '#89a397',
+                            gold: '#A86728',
+                            'gold-light': '#f5ebe6',
+                            'cream-light': '#f3f7f5',
+                            'cream-sand': '#e1eae6',
+                            charcoal: '#221f1e',
+                            'charcoal-muted': '#5c7067',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-cream-light text-brand-charcoal antialiased selection:bg-brand-gold selection:text-brand-darkest">
+
+    <!-- Custom Cursor Nodes -->
+    <div id="custom-cursor" class="hidden md:block" aria-hidden="true"></div>
+    <div id="custom-cursor-ring" class="hidden md:block" aria-hidden="true"></div>
+
+    <!-- Fine Paper Grain Texture -->
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <!-- MOBILE NAVIGATION OVERLAY (GSAP Drawer) -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 bg-brand-darkest/95 backdrop-blur-lg flex flex-col justify-between p-8 translate-x-full pointer-events-none" aria-hidden="true" inert>
+        <div class="flex justify-between items-center">
+            <a href="pushpam_home_page.html" class="cursor-pointer-target" aria-label="Pushpam Ayurveda home">
+                <img src="./Pushpam Logo Horizontal Dark.svg" alt="Pushpam Ayurveda Wellness Centre Logo" class="h-14 w-auto object-contain">
+            </a>
+            <button type="button" id="close-menu-btn" aria-label="Close menu" class="p-3 bg-brand-leaf/40 text-brand-gold rounded-full border border-brand-gold/20 cursor-pointer-target">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <div class="flex flex-col space-y-6 text-3xl font-display text-brand-gold-light mt-12" role="navigation" aria-label="Mobile navigation">
+            <a href="pushpam_home_page.html" class="mobile-nav-link hover:text-brand-gold transition-colors cursor-pointer-target">Home</a>
+            <a href="about.html" class="mobile-nav-link hover:text-brand-gold transition-colors cursor-pointer-target">About</a>
+            <a href="treatments.html" class="mobile-nav-link hover:text-brand-gold transition-colors cursor-pointer-target">Treatments</a>
+            <a href="doctors.html" class="mobile-nav-link hover:text-brand-gold transition-colors cursor-pointer-target">Doctors</a>
+            <a href="corporate-wellness.html" class="mobile-nav-link hover:text-brand-gold transition-colors cursor-pointer-target">Corporate Wellness</a>
+        </div>
+        <div class="flex flex-col space-y-4 pt-12 border-t border-brand-leaf/30">
+            <a href="tel:+919871731008" class="text-sm font-medium text-brand-sage hover:text-brand-gold transition-colors cursor-pointer-target flex items-center gap-2">
+                <i data-lucide="phone" class="w-4 h-4"></i> +91 98765 43210
+            </a>
+            <a href="#book" class="bg-brand-gold text-brand-darkest py-4 rounded-full text-center font-bold tracking-wide hover:bg-white transition-all cursor-pointer-target">
+                Book Consultation
+            </a>
+        </div>
+    </div>
+
+    <!-- NAVIGATION BAR -->
+    <nav id="navbar" aria-label="Primary" class="fixed w-full z-40 top-0 left-0 transition-all duration-500 py-6 border-b border-transparent">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center justify-between">
+            <a href="pushpam_home_page.html" class="flex items-center cursor-pointer-target" aria-label="Pushpam Ayurveda home">
+                <img src="./Pushpam Logo Horizontal Dark.svg" alt="Pushpam Ayurveda Wellness Centre Logo" class="h-14 w-auto object-contain">
+            </a>
+            
+            <div class="hidden lg:flex items-center space-x-10 text-[0.95rem] font-medium text-white/90">
+                <a href="pushpam_home_page.html" class="nav-link hover:text-brand-deep transition-colors cursor-pointer-target">Home</a>
+                <a href="about.html" class="nav-link hover:text-brand-deep transition-colors cursor-pointer-target">About</a>
+                <a href="treatments.html" class="nav-link text-brand-gold hover:text-brand-deep transition-colors cursor-pointer-target">Treatments</a>
+                <a href="doctors.html" class="nav-link hover:text-brand-deep transition-colors cursor-pointer-target">Doctors</a>
+                <a href="corporate-wellness.html" class="nav-link hover:text-brand-deep transition-colors cursor-pointer-target">Corporate Wellness</a>
+            </div>
+
+            <div class="hidden lg:flex items-center space-x-6">
+                <a href="tel:+919871731008" class="text-sm font-medium text-white/90 hover:text-brand-gold transition-colors cursor-pointer-target flex items-center gap-1.5">
+                    <i data-lucide="phone" class="w-4 h-4 text-brand-gold-light"></i> Call Clinic
+                </a>
+                <div class="btn-magnetic">
+                    <a href="#book" class="bg-brand-deep text-brand-gold-light px-10 py-[18px] rounded-full text-base font-semibold tracking-wide border border-brand-leaf hover:bg-brand-gold hover:text-brand-darkest hover:border-brand-gold transition-all duration-300 shadow-md shadow-brand-deep/10 cursor-pointer-target">
+                        Book Consultation
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button type="button" id="open-menu-btn" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false" class="lg:hidden p-3 text-brand-gold bg-brand-deep/60 hover:bg-brand-deep rounded-full transition-colors cursor-pointer-target">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO HEADER -->
+    <section class="pt-40 pb-24 bg-gradient-to-br from-[#1b1918] via-[#221f1e] to-[#2d2927] border-b border-brand-gold/10 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: radial-gradient(circle at 1px 1px, var(--color-gold-accent) 1px, transparent 0); background-size: 24px 24px;"></div>
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12 text-center space-y-4 relative z-10 animate-fade-in">
+            <span class="text-xs font-bold tracking-widest text-brand-gold uppercase block">
+                Clinical Interventions
+            </span>
+            <h1 class="text-4xl lg:text-6xl font-display font-medium text-white leading-[1.35]">
+                Ayurvedic Treatments and Conditions
+            </h1>
+            <p class="text-base md:text-lg text-brand-cream-sand/80 font-light max-w-2xl mx-auto leading-relaxed">
+                A thorough clinical consultation precedes every single treatment program. No generic package menus.
+            </p>
+        </div>
+    </section>
+
+    <!-- CONSULTATION REQUIREMENT (3-Column Layout from Screenshot) -->
+    <section class="py-24 bg-brand-cream-light relative border-b border-brand-cream-sand/40">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12 space-y-16 animate-fade-in">
+            
+            <!-- 3 Column Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="group relative rounded-[2.5rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 aspect-[4/3] w-full border border-brand-gold/10 bg-brand-cream-sand">
+                    <img src="./ayurveda_consultation.png" alt="Consultation-led treatment planning" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-brand-deep/95 border border-brand-gold/25 text-brand-gold-light text-xs sm:text-sm font-semibold py-3 px-6 rounded-full shadow-md backdrop-blur-sm whitespace-nowrap text-center">
+                        Consultation-led treatment planning
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group relative rounded-[2.5rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 aspect-[4/3] w-full border border-brand-gold/10 bg-brand-cream-sand">
+                    <img src="./ayurveda_back_massage.png" alt="Classical therapies with supervision" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-brand-deep/95 border border-brand-gold/25 text-brand-gold-light text-xs sm:text-sm font-semibold py-3 px-6 rounded-full shadow-md backdrop-blur-sm whitespace-nowrap text-center">
+                        Classical therapies with supervision
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group relative rounded-[2.5rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 aspect-[4/3] w-full border border-brand-gold/10 bg-brand-cream-sand">
+                    <img src="./ayurveda_recovery_set.png" alt="Recovery plans tailored to each patient" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-brand-deep/95 border border-brand-gold/25 text-brand-gold-light text-xs sm:text-sm font-semibold py-3 px-6 rounded-full shadow-md backdrop-blur-sm whitespace-nowrap text-center">
+                        Recovery plans tailored to each patient
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Centered Quote -->
+            <div class="text-center max-w-4xl mx-auto pt-4">
+                <p class="text-lg lg:text-xl font-display font-medium text-brand-deep italic leading-relaxed">
+                    "Before any treatment: a detailed consultation is mandatory. The same condition in two people often requires a completely different metabolic approach."
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONDITIONS WE COMMONLY TREAT -->
+    <section class="py-24 bg-gradient-to-b from-white via-[#f3f7f5] to-white relative border-b border-brand-cream-sand/40">
+        <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+            <div class="text-center mb-16 space-y-3">
+                <span class="text-xs font-bold tracking-widest text-brand-gold uppercase">Focus Areas</span>
+                <h2 class="text-4xl lg:text-5xl font-display font-medium text-brand-darkest">Conditions We Commonly Treat</h2>
+                <p class="text-base text-brand-charcoal-muted font-light max-w-2xl mx-auto leading-relaxed">
+                    Ayurvedic treatments are tailored to the individual. Click each card to view details, real-world relief cases, and clinical approaches.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Spine & Joint -->
+                <div class="faq-item group bg-gradient-to-br from-white to-[#f3f7f5] rounded-[2rem] border border-brand-gold/15 overflow-hidden shadow-md shadow-brand-deep/5 transition-all duration-300 flex flex-col hover:shadow-lg hover:border-brand-gold/30">
+                    <div class="aspect-[16/10] w-full overflow-hidden bg-brand-cream-sand border-b border-brand-gold/10 relative">
+                        <img src="./assets/conditions/back-pain-disc.jpg" alt="Indian man with a highlighted lumbar spine and lower-back scan showing a disc problem" width="1200" height="900" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <h4 class="font-display text-xl font-bold text-brand-deep">Spine, Joint & Back Pain</h4>
+                            <p class="text-xs text-brand-charcoal-muted leading-relaxed font-light">
+                                Effective pain management and L4-L5-S1 disc restoration protocols to avoid surgery and restore mobility.
+                            </p>
+                        </div>
+                        
+                        <div class="mt-6 pt-4 border-t border-brand-cream-sand/60">
+                            <button type="button" class="faq-trigger w-full flex justify-between items-center text-[10px] font-bold text-brand-gold uppercase tracking-widest hover:text-brand-deep transition-colors cursor-pointer-target">
+                                <span>Read Details & Approach</span>
+                                <i data-lucide="chevron-down" class="w-4 h-4 text-brand-gold transition-transform duration-300"></i>
+                            </button>
+                            
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                <div class="pt-4 text-xs text-brand-charcoal-muted space-y-3 leading-relaxed font-light">
+                                    <p>One of the most common reasons patients come to Pushpam, often after they've already tried other options. We've seen patients with L4-L5-S1 disc bulges and L5-S1 slip discs find significant relief through Ayurvedic treatment, including several who avoided surgery.</p>
+                                    <p>Treatment typically includes Kati Basti (localized oil therapy for the lower back), pottali swedas (herbal poultice), Abhyanga, and internal medicines. Dr. Mahathi will review your reports and give you an honest assessment of what is realistically possible for your case.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Digestive -->
+                <div class="faq-item group bg-gradient-to-br from-white to-[#f3f7f5] rounded-[2rem] border border-brand-gold/15 overflow-hidden shadow-md shadow-brand-deep/5 transition-all duration-300 flex flex-col hover:shadow-lg hover:border-brand-gold/30">
+                    <div class="aspect-[16/10] w-full overflow-hidden bg-brand-cream-sand border-b border-brand-gold/10 relative">
+                        <img src="./assets/conditions/digestive-disorders.jpg" alt="Indian woman with the stomach and intestines highlighted to show digestive discomfort" width="1200" height="900" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <h4 class="font-display text-xl font-bold text-brand-deep">Digestive Disorders</h4>
+                            <p class="text-xs text-brand-charcoal-muted leading-relaxed font-light">
+                                Rebuilding digestive fire (Agni) to clear systemic toxins (Ama) and restore metabolic harmony.
+                            </p>
+                        </div>
+                        
+                        <div class="mt-6 pt-4 border-t border-brand-cream-sand/60">
+                            <button type="button" class="faq-trigger w-full flex justify-between items-center text-[10px] font-bold text-brand-gold uppercase tracking-widest hover:text-brand-deep transition-colors cursor-pointer-target">
+                                <span>Read Details & Approach</span>
+                                <i data-lucide="chevron-down" class="w-4 h-4 text-brand-gold transition-transform duration-300"></i>
+                            </button>
+                            
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                <div class="pt-4 text-xs text-brand-charcoal-muted space-y-3 leading-relaxed font-light">
+                                    <p>In Ayurveda, digestion is the foundation of everything. When Agni (the digestive fire) is compromised, it creates downstream problems: low energy, skin issues, weight gain, brain fog. Many chronic conditions that don't seem digestive actually start here.</p>
+                                    <p>We treat chronic acidity, bloating, IBS-type symptoms, and sluggish metabolism. Treatment involves clearing accumulated toxins (Ama) and rebuilding digestive strength through Panchakarma, herbal medicines, and dietary guidance.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Skin -->
+                <div class="faq-item group bg-gradient-to-br from-white to-[#f3f7f5] rounded-[2rem] border border-brand-gold/15 overflow-hidden shadow-md shadow-brand-deep/5 transition-all duration-300 flex flex-col hover:shadow-lg hover:border-brand-gold/30">
+                    <div class="aspect-[16/10] w-full overflow-hidden bg-brand-cream-sand border-b border-brand-gold/10 relative">
+                        <img src="./assets/conditions/skin-conditions.jpg" alt="Indian patient and doctor examining an eczema patch with a skin-layer comparison" width="1200" height="900" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <h4 class="font-display text-xl font-bold text-brand-deep">Chronic Skin Conditions</h4>
+                            <p class="text-xs text-brand-charcoal-muted leading-relaxed font-light">
+                                Purifying internal blood tissues (Rakta) and cooling Pitta heat to resolve acne, eczema, and psoriasis.
+                            </p>
+                        </div>
+                        
+                        <div class="mt-6 pt-4 border-t border-brand-cream-sand/60">
+                            <button type="button" class="faq-trigger w-full flex justify-between items-center text-[10px] font-bold text-brand-gold uppercase tracking-widest hover:text-brand-deep transition-colors cursor-pointer-target">
+                                <span>Read Details & Approach</span>
+                                <i data-lucide="chevron-down" class="w-4 h-4 text-brand-gold transition-transform duration-300"></i>
+                            </button>
+                            
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                <div class="pt-4 text-xs text-brand-charcoal-muted space-y-3 leading-relaxed font-light">
+                                    <p>Skin problems in Ayurveda are rarely just skin problems. Chronic acne, eczema, and psoriasis are typically expressions of internal imbalance, usually involving the blood (Rakta Dhatu) and Pitta aggravation, compounded by poor digestion.</p>
+                                    <p>Apoorva came to Pushpam after consulting three allopathy hospitals with no results. Within 15 days of Panchakarma, she noticed visible improvement. Treatment is always individual. Two patients with psoriasis will not receive the same protocol.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Hormonal -->
+                <div class="faq-item group bg-gradient-to-br from-white to-[#f3f7f5] rounded-[2rem] border border-brand-gold/15 overflow-hidden shadow-md shadow-brand-deep/5 transition-all duration-300 flex flex-col hover:shadow-lg hover:border-brand-gold/30">
+                    <div class="aspect-[16/10] w-full overflow-hidden bg-brand-cream-sand border-b border-brand-gold/10 relative">
+                        <img src="./assets/conditions/pcod-hormonal.jpg" alt="Indian woman in consultation with the ovaries and uterus highlighted to explain PCOD" width="1200" height="900" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <h4 class="font-display text-xl font-bold text-brand-deep">PCOD & Women's Health</h4>
+                            <p class="text-xs text-brand-charcoal-muted leading-relaxed font-light">
+                                Targeting digestive imbalances, managing stress levels, and regulating menstrual cycles naturally.
+                            </p>
+                        </div>
+                        
+                        <div class="mt-6 pt-4 border-t border-brand-cream-sand/60">
+                            <button type="button" class="faq-trigger w-full flex justify-between items-center text-[10px] font-bold text-brand-gold uppercase tracking-widest hover:text-brand-deep transition-colors cursor-pointer-target">
+                                <span>Read Details & Approach</span>
+                                <i data-lucide="chevron-down" class="w-4 h-4 text-brand-gold transition-transform duration-300"></i>
+                            </button>
+                            
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                <div class="pt-4 text-xs text-brand-charcoal-muted space-y-3 leading-relaxed font-light">
+                                    <p>PCOD and hormonal disorders are traced in Ayurveda to their root: usually a combination of digestive imbalance, chronic stress, and disrupted sleep. Treatment at Pushpam may include specific formulations, targeted Panchakarma, and lifestyle guidance.</p>
+                                    <p>Dr. Mahathi works with irregular menstruation, PCOD, hormonal imbalance, and related fatigue and weight concerns.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Thyroid -->
+                <div class="faq-item group bg-gradient-to-br from-white to-[#f3f7f5] rounded-[2rem] border border-brand-gold/15 overflow-hidden shadow-md shadow-brand-deep/5 transition-all duration-300 flex flex-col hover:shadow-lg hover:border-brand-gold/30">
+                    <div class="aspect-[16/10] w-full overflow-hidden bg-brand-cream-sand border-b border-brand-gold/10 relative">
+                        <img src="./assets/conditions/thyroid.jpg" alt="Indian woman receiving a neck examination with the thyroid gland clearly highlighted" width="1200" height="900" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <h4 class="font-display text-xl font-bold text-brand-deep">Thyroid Management</h4>
+                            <p class="text-xs text-brand-charcoal-muted leading-relaxed font-light">
+                                Addressing underlying thyroid dysfunctions by treating metabolic processes and Agni health.
+                            </p>
+                        </div>
+                        
+                        <div class="mt-6 pt-4 border-t border-brand-cream-sand/60">
+                            <button type="button" class="faq-trigger w-full flex justify-between items-center text-[10px] font-bold text-brand-gold uppercase tracking-widest hover:text-brand-deep transition-colors cursor-pointer-target">
+                                <span>Read Details & Approach</span>
+                                <i data-lucide="chevron-down" class="w-4 h-4 text-brand-gold transition-transform duration-300"></i>
+                            </button>
+                            
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                <div class="pt-4 text-xs text-brand-charcoal-muted space-y-3 leading-relaxed font-light">
+                                    <p>Ayurveda approaches thyroid dysfunction by addressing the underlying metabolic and digestive imbalances that affect thyroid function, not just managing hormone levels. Archana came in with a thyroid condition and noticed clear improvement through Ayurvedic treatment.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Stress -->
+                <div class="faq-item group bg-gradient-to-br from-white to-[#f3f7f5] rounded-[2rem] border border-brand-gold/15 overflow-hidden shadow-md shadow-brand-deep/5 transition-all duration-300 flex flex-col hover:shadow-lg hover:border-brand-gold/30">
+                    <div class="aspect-[16/10] w-full overflow-hidden bg-brand-cream-sand border-b border-brand-gold/10 relative">
+                        <img src="./assets/conditions/stress-sleep.jpg" alt="Indian man experiencing stress with brain activity and the sleep cycle visualized" width="1200" height="900" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <h4 class="font-display text-xl font-bold text-brand-deep">Stress, Burnout & Insomnia</h4>
+                            <p class="text-xs text-brand-charcoal-muted leading-relaxed font-light">
+                                Rebuilding vital energy reserves (Ojas) and settling Vata hyper-reactivity in the nervous system.
+                            </p>
+                        </div>
+                        
+                        <div class="mt-6 pt-4 border-t border-brand-cream-sand/60">
+                            <button type="button" class="faq-trigger w-full flex justify-between items-center text-[10px] font-bold text-brand-gold uppercase tracking-widest hover:text-brand-deep transition-colors cursor-pointer-target">
+                                <span>Read Details & Approach</span>
+                                <i data-lucide="chevron-down" class="w-4 h-4 text-brand-gold transition-transform duration-300"></i>
+                            </button>
+                            
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                <div class="pt-4 text-xs text-brand-charcoal-muted space-y-3 leading-relaxed font-light">
+                                    <p>Chronic stress in Ayurveda is understood as a depletion of Ojas (vital energy), caused by overwork, irregular routines, and inadequate sleep. Left unaddressed, it becomes fatigue, anxiety, insomnia, and eventually physical illness.</p>
+                                    <p>Pushpam offers calming therapies including Shirodhara, herbal nervous system support, and structured lifestyle guidance. The goal is to rebuild Ojas, not just manage symptoms.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7: Preventive -->
+                <div class="faq-item group bg-gradient-to-br from-white to-[#f3f7f5] rounded-[2rem] border border-brand-gold/15 overflow-hidden shadow-md shadow-brand-deep/5 transition-all duration-300 flex flex-col hover:shadow-lg hover:border-brand-gold/30 lg:col-start-2">
+                    <div class="aspect-[16/10] w-full overflow-hidden bg-brand-cream-sand border-b border-brand-gold/10 relative">
+                        <img src="./assets/conditions/preventive-panchakarma.jpg" alt="Indian Ayurvedic pulse consultation with major body systems shown in a preventive wellness assessment" width="1200" height="900" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <h4 class="font-display text-xl font-bold text-brand-deep">Preventive Care & Detox</h4>
+                            <p class="text-xs text-brand-charcoal-muted leading-relaxed font-light">
+                                Proactive health consultations, seasonal Panchakarma cleanses, and custom lifestyle modifications.
+                            </p>
+                        </div>
+                        
+                        <div class="mt-6 pt-4 border-t border-brand-cream-sand/60">
+                            <button type="button" class="faq-trigger w-full flex justify-between items-center text-[10px] font-bold text-brand-gold uppercase tracking-widest hover:text-brand-deep transition-colors cursor-pointer-target">
+                                <span>Read Details & Approach</span>
+                                <i data-lucide="chevron-down" class="w-4 h-4 text-brand-gold transition-transform duration-300"></i>
+                            </button>
+                            
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                <div class="pt-4 text-xs text-brand-charcoal-muted space-y-3 leading-relaxed font-light">
+                                    <p>You don't have to be unwell to come to Pushpam. Seasonal Panchakarma, wellness consultations, and diet & lifestyle counselling are available for patients who want to maintain their health rather than react when something goes wrong.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- THERAPIES WE USE -->
+    <!-- THERAPIES WE USE -->
+    <section class="py-24 lg:py-32 bg-gradient-to-tr from-[#e1eae6]/20 via-[#f3f7f5] to-[#d3e3dd]/30 relative border-b border-brand-cream-sand/40">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+            <div class="text-center max-w-3xl mx-auto space-y-3 mb-20">
+                <span class="text-xs font-bold tracking-widest text-brand-gold uppercase">Clinical Interventions</span>
+                <h2 class="text-4xl lg:text-5xl font-display font-medium text-brand-darkest">Therapies We Use</h2>
+                <p class="text-sm italic text-brand-charcoal-muted">All therapies are prescribed by Dr. Mahathi based on your diagnosis. Nothing is offered as a menu.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Therapy 1 -->
+                <div class="group bg-gradient-to-br from-white to-[#f3f7f5] rounded-[2rem] border border-brand-gold/15 overflow-hidden shadow-md shadow-brand-deep/5 transition-all duration-300 flex flex-col hover:shadow-lg hover:border-brand-gold/30">
+                    <div class="aspect-[16/10] w-full overflow-hidden bg-brand-cream-sand border-b border-brand-gold/10 relative">
+                        <img src="./therapy_panchakarma.png" alt="Panchakarma Ayurvedic Detox" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <h4 class="font-display text-2xl font-semibold text-brand-deep">Panchakarma</h4>
+                            <p class="text-xs text-brand-charcoal-muted leading-relaxed font-light">
+                                The classical Ayurvedic detox system: preparatory treatments followed by procedures such as Virechana, Vamana, Basti, and Nasya. Duration: typically 7 to 21 days, decided after consultation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Therapy 2 -->
+                <div class="group bg-gradient-to-br from-white to-[#f3f7f5] rounded-[2rem] border border-brand-gold/15 overflow-hidden shadow-md shadow-brand-deep/5 transition-all duration-300 flex flex-col hover:shadow-lg hover:border-brand-gold/30">
+                    <div class="aspect-[16/10] w-full overflow-hidden bg-brand-cream-sand border-b border-brand-gold/10 relative">
+                        <img src="./therapy_katibasti.png" alt="Kati Basti Lumbar Therapy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <h4 class="font-display text-2xl font-semibold text-brand-deep">Kati Basti</h4>
+                            <p class="text-xs text-brand-charcoal-muted leading-relaxed font-light">
+                                Localized oil retention therapy for the lower back. A warm medicated oil pool is held at the lumbar region. Particularly effective for disc-related pain.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Therapy 3 -->
+                <div class="group bg-gradient-to-br from-white to-[#f3f7f5] rounded-[2rem] border border-brand-gold/15 overflow-hidden shadow-md shadow-brand-deep/5 transition-all duration-300 flex flex-col hover:shadow-lg hover:border-brand-gold/30">
+                    <div class="aspect-[16/10] w-full overflow-hidden bg-brand-cream-sand border-b border-brand-gold/10 relative">
+                        <img src="./therapy_kizhi.png" alt="Kizhi Pottali Sweda Treatment" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <h4 class="font-display text-2xl font-semibold text-brand-deep">Kizhi/Pottali Sweda</h4>
+                            <p class="text-xs text-brand-charcoal-muted leading-relaxed font-light">
+                                Herbal poultice therapy. Heated bundles applied rhythmically to reduce inflammation, improve circulation, and relieve joint and muscular pain.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Therapy 4 -->
+                <div class="group bg-gradient-to-br from-white to-[#f3f7f5] rounded-[2rem] border border-brand-gold/15 overflow-hidden shadow-md shadow-brand-deep/5 transition-all duration-300 flex flex-col hover:shadow-lg hover:border-brand-gold/30">
+                    <div class="aspect-[16/10] w-full overflow-hidden bg-brand-cream-sand border-b border-brand-gold/10 relative">
+                        <img src="./therapy_abhyanga.png" alt="Abhyanga Ayurvedic Massage" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <h4 class="font-display text-2xl font-semibold text-brand-deep">Abhyanga</h4>
+                            <p class="text-xs text-brand-charcoal-muted leading-relaxed font-light">
+                                Full-body therapeutic oil massage with medicated oils. Supports circulation and nervous system function. Often used to prepare the body before Panchakarma.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Therapy 5 -->
+                <div class="group bg-gradient-to-br from-white to-[#f3f7f5] rounded-[2rem] border border-brand-gold/15 overflow-hidden shadow-md shadow-brand-deep/5 transition-all duration-300 flex flex-col hover:shadow-lg hover:border-brand-gold/30">
+                    <div class="aspect-[16/10] w-full overflow-hidden bg-brand-cream-sand border-b border-brand-gold/10 relative">
+                        <img src="./therapy_shirodhara.png" alt="Shirodhara Warm Oil Therapy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <h4 class="font-display text-2xl font-semibold text-brand-deep">Shirodhara</h4>
+                            <p class="text-xs text-brand-charcoal-muted leading-relaxed font-light">
+                                A continuous warm oil stream poured over the forehead. Deeply calming. Used for stress, anxiety, sleep disorders, and neurological conditions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Therapy 6 -->
+                <div class="group bg-gradient-to-br from-white to-[#f3f7f5] rounded-[2rem] border border-brand-gold/15 overflow-hidden shadow-md shadow-brand-deep/5 transition-all duration-300 flex flex-col hover:shadow-lg hover:border-brand-gold/30">
+                    <div class="aspect-[16/10] w-full overflow-hidden bg-brand-cream-sand border-b border-brand-gold/10 relative">
+                        <img src="./therapy_medicines.png" alt="Ayurvedic Medicines and Herbal Formulations" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <h4 class="font-display text-2xl font-semibold text-brand-deep">Medicines</h4>
+                            <p class="text-xs text-brand-charcoal-muted leading-relaxed font-light">
+                                Classical Ayurvedic formulations (kashayas, tablets, capsules, churnas, etc.) prescribed individually based on your constitution(prakriti) and condition.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOK CTA -->
+    <section id="book" class="py-20 bg-brand-deep text-brand-gold-light text-center border-t border-brand-leaf relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 relative z-10 space-y-8">
+            <h2 class="text-4xl lg:text-5xl font-display font-medium">Schedule Clinical Assessment</h2>
+            <p class="text-base text-brand-cream-sand/80 max-w-xl mx-auto font-light">
+                Come in and talk. Dr. Mahathi will review your case, tell you what she thinks, and if treatment is appropriate, design a plan that fits your life.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                <div class="btn-magnetic">
+                    <a href="pushpam_home_page.html#book" class="bg-brand-gold text-brand-darkest px-12 py-[22px] rounded-full font-bold text-base sm:text-lg hover:bg-white transition-all cursor-pointer-target">
+                        Book a Consultation
+                    </a>
+                </div>
+                <div class="btn-magnetic">
+                    <a href="doctors.html" class="bg-brand-leaf text-white px-12 py-[22px] rounded-full font-bold text-base sm:text-lg hover:bg-brand-gold hover:text-brand-darkest border border-brand-gold/30 transition-all cursor-pointer-target">
+                        Meet Dr. Mahathi
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-darkest text-brand-gold-light pt-24 pb-8 relative overflow-hidden">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-16 mb-20">
+                <div class="space-y-6">
+                    <a href="pushpam_home_page.html" class="cursor-pointer-target" aria-label="Pushpam Ayurveda home">
+                        <img src="./Pushpam Logo Horizontal Dark.svg" alt="Pushpam Ayurveda Wellness Centre Logo" class="h-16 w-auto object-contain">
+                    </a>
+                    <p class="text-xs text-brand-sage leading-relaxed max-w-xs">
+                        An elite Ayurvedic corrective clinic specializing in systemic stabilization programs for chronic musculoskeletal, skin and metabolic conditions.
+                    </p>
+                </div>
+                <div class="space-y-6">
+                    <h4 class="font-display text-lg font-semibold text-brand-gold">Clinical Focus</h4>
+                    <ul class="space-y-3 text-xs text-brand-sage font-medium">
+                        <li><a href="treatments.html" class="hover:text-brand-gold transition-colors cursor-pointer-target">Chronic Pain & Spine Care</a></li>
+                        <li><a href="treatments.html" class="hover:text-brand-gold transition-colors cursor-pointer-target">PCOD Reversal & Skin Relief</a></li>
+                        <li><a href="treatments.html" class="hover:text-brand-gold transition-colors cursor-pointer-target">Digestive Reset & Detox</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-6">
+                    <h4 class="font-display text-lg font-semibold text-brand-gold">Organisation</h4>
+                    <ul class="space-y-3 text-xs text-brand-sage font-medium">
+                        <li><a href="about.html" class="hover:text-brand-gold transition-colors cursor-pointer-target">About Dr. Mahathi</a></li>
+                        <li><a href="treatments.html" class="hover:text-brand-gold transition-colors cursor-pointer-target">Panchakarma Detox</a></li>
+                        <li><a href="corporate-wellness.html" class="hover:text-brand-gold transition-colors cursor-pointer-target">Corporate Wellness</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-6">
+                    <h4 class="font-display text-lg font-semibold text-brand-gold">Clinic Hours</h4>
+                    <ul class="space-y-3 text-xs text-brand-sage font-medium">
+                        <li>Mon - Sat: 09:00 AM - 07:00 PM</li>
+                        <li>Sunday: Prior Appointment Only</li>
+                        <li>Telephone: +91 98765 43210</li>
+                    </ul>
+                </div>
+
+                <!-- Find Us Map Column -->
+                <div class="space-y-6">
+                    <h4 class="font-display text-lg font-semibold text-brand-gold">Find Us</h4>
+                    <div class="overflow-hidden rounded-2xl border border-brand-gold/20 shadow-md shadow-brand-deep/5 aspect-[4/3] bg-brand-deep/20">
+                        <iframe title="Google Map - Pushpam Ayurveda Wellness Centre, JP Nagar, Bangalore" src="https://www.google.com/maps?q=Pushpam%20Ayurveda%20Wellness%20Centre%20JP%20Nagar%20Bangalore&output=embed" class="w-full h-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                    </div>
+                    <a href="https://maps.app.goo.gl/yih5ZbYP4ES6hFcU9" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-gold hover:text-brand-gold-light transition-colors cursor-pointer-target">
+                        Open in Google Maps <i data-lucide="external-link" class="w-4 h-4" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-brand-leaf/30 py-6 text-center text-sm text-brand-sage/70 font-semibold gap-x-3 gap-y-2 flex flex-wrap justify-center items-center">
+                <a href="pushpam_home_page.html" class="hover:text-brand-gold transition-colors cursor-pointer-target">Ayurvedic Clinic JP Nagar Bangalore</a>
+                <span>|</span>
+                <a href="treatments.html" class="hover:text-brand-gold transition-colors cursor-pointer-target">Ayurvedic treatment for chronic pain in Bangalore</a>
+                <span>|</span>
+                <a href="treatments.html" class="hover:text-brand-gold transition-colors cursor-pointer-target">PCOD Ayurveda treatment Bangalore</a>
+                <span>|</span>
+                <a href="treatments.html" class="hover:text-brand-gold transition-colors cursor-pointer-target">Thyroid treatment Ayurveda Bangalore</a>
+            </div>
+
+            <div class="border-t border-brand-leaf/20 py-4 text-sm text-brand-sage/60 leading-relaxed text-center max-w-4xl mx-auto">
+                Disclaimer: Ayurvedic treatment is not a substitute for emergency medical care. Results vary based on individual conditions.
+            </div>
+
+            <div class="border-t border-brand-leaf/30 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-brand-sage/75">
+                <p>&copy; 2026 Pushpam Ayurveda Wellness Centre. All rights reserved.</p>
+                <div class="flex gap-6 font-semibold">
+                    <span class="text-brand-sage/70">Privacy Statement</span>
+                    <span class="text-brand-sage/70">Terms of Service</span>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        lucide.createIcons({ attrs: { 'aria-hidden': 'true' } });
+
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            touchMultiplier: 2
+        });
+
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000);
+        });
+        gsap.ticker.lagSmoothing(0);
+
+        /* CUSTOM CURSOR SYSTEM */
+        const cursor = document.getElementById('custom-cursor');
+        const cursorRing = document.getElementById('custom-cursor-ring');
+        let mouseX = 0, mouseY = 0;
+        let ringX = 0, ringY = 0;
+        
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            gsap.set(cursor, { x: mouseX, y: mouseY });
+        });
+
+        gsap.ticker.add(() => {
+            ringX += (mouseX - ringX) * 0.15;
+            ringY += (mouseY - ringY) * 0.15;
+            gsap.set(cursorRing, { x: ringX, y: ringY });
+        });
+
+        const targets = document.querySelectorAll('.cursor-pointer-target, a, button, input, select, textarea');
+        targets.forEach(t => {
+            t.addEventListener('mouseenter', () => { document.body.classList.add('cursor-hover'); });
+            t.addEventListener('mouseleave', () => { document.body.classList.remove('cursor-hover'); });
+        });
+
+        document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
+            const currentFile = window.location.pathname.split('/').pop() || 'pushpam_home_page.html';
+            const linkFile = link.getAttribute('href').split('#')[0];
+            if (linkFile === currentFile) {
+                link.setAttribute('aria-current', 'page');
+            }
+        });
+
+        /* NAVBAR DYNAMIC GLASS EFFECT */
+        const navbar = document.getElementById('navbar');
+        const navLogo = navbar.querySelector('img');
+        const navLinksContainer = navbar.querySelector('.lg\\:flex.items-center.space-x-10');
+        const phoneLink = navbar.querySelector('a[href^="tel:"]');
+        const callIcon = phoneLink.querySelector('svg, i');
+        const menuBtn = document.getElementById('open-menu-btn');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-brand-cream-light/80', 'backdrop-blur-md', 'shadow-sm', 'border-brand-cream-sand/40', 'py-4');
+                navbar.classList.remove('py-6', 'border-transparent');
+                
+                // Scrolled: light background, dark logo/text
+                navLogo.src = './Pushpam Logo Horizontal Light.svg';
+                navLinksContainer.classList.add('text-brand-charcoal-muted');
+                navLinksContainer.classList.remove('text-white/90');
+                
+                // Adjust current active links
+                const activeLink = navLinksContainer.querySelector('.text-brand-gold');
+                if (activeLink) {
+                    activeLink.classList.remove('text-brand-gold');
+                    activeLink.classList.add('text-brand-deep');
+                }
+                
+                phoneLink.classList.add('text-brand-deep');
+                phoneLink.classList.remove('text-white/90');
+                if (callIcon) callIcon.classList.add('text-brand-gold');
+                if (callIcon) callIcon.classList.remove('text-brand-gold-light');
+                
+                menuBtn.classList.remove('text-brand-gold', 'bg-brand-deep/60');
+                menuBtn.classList.add('text-brand-deep', 'bg-brand-cream-sand/60');
+            } else {
+                navbar.classList.remove('bg-brand-cream-light/80', 'backdrop-blur-md', 'shadow-sm', 'border-brand-cream-sand/40', 'py-4');
+                navbar.classList.add('py-6', 'border-transparent');
+                
+                // Unscrolled: dark background, white/gold logo/text
+                navLogo.src = './Pushpam Logo Horizontal Dark.svg';
+                navLinksContainer.classList.remove('text-brand-charcoal-muted');
+                navLinksContainer.classList.add('text-white/90');
+                
+                // Adjust current active links
+                const activeLink = navLinksContainer.querySelector('.text-brand-deep');
+                if (activeLink) {
+                    activeLink.classList.remove('text-brand-deep');
+                    activeLink.classList.add('text-brand-gold');
+                }
+                
+                phoneLink.classList.remove('text-brand-deep');
+                phoneLink.classList.add('text-white/90');
+                if (callIcon) callIcon.classList.remove('text-brand-gold');
+                if (callIcon) callIcon.classList.add('text-brand-gold-light');
+                
+                menuBtn.classList.add('text-brand-gold', 'bg-brand-deep/60');
+                menuBtn.classList.remove('text-brand-deep', 'bg-brand-cream-sand/60');
+            }
+        });
+
+        /* MOBILE MENU DRAWER */
+        const mobileMenu = document.getElementById('mobile-menu');
+        const openMenuBtn = document.getElementById('open-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+        const mobileFocusable = mobileMenu.querySelectorAll('a, button');
+        mobileMenu.inert = true;
+        let lastFocusedElement = null;
+
+        const menuTl = gsap.timeline({ paused: true });
+        menuTl.to(mobileMenu, { x: 0, duration: 0.45, ease: "power3.inOut" })
+              .from(mobileLinks, { x: 24, opacity: 0, stagger: 0.06, duration: 0.25, ease: "power2.out" }, "-=0.1");
+
+        const openMenuAction = () => {
+            lastFocusedElement = document.activeElement;
+            mobileMenu.style.pointerEvents = 'auto';
+            mobileMenu.setAttribute('aria-hidden', 'false');
+            mobileMenu.inert = false;
+            openMenuBtn.setAttribute('aria-expanded', 'true');
+            document.body.classList.add('mobile-menu-open');
+            menuTl.play(0);
+            lenis.stop();
+            setTimeout(() => closeMenuBtn.focus(), 80);
+        };
+
+        const closeMenuAction = () => {
+            mobileMenu.setAttribute('aria-hidden', 'true');
+            openMenuBtn.setAttribute('aria-expanded', 'false');
+            document.body.classList.remove('mobile-menu-open');
+            menuTl.reverse();
+            setTimeout(() => {
+                mobileMenu.style.pointerEvents = 'none';
+                mobileMenu.inert = true;
+                if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+                    lastFocusedElement.focus();
+                }
+            }, 450);
+            lenis.start();
+        };
+
+        openMenuBtn.addEventListener('click', openMenuAction);
+        closeMenuBtn.addEventListener('click', closeMenuAction);
+        mobileLinks.forEach(link => link.addEventListener('click', closeMenuAction));
+        document.addEventListener('keydown', (event) => {
+            if (mobileMenu.getAttribute('aria-hidden') === 'true') return;
+            if (event.key === 'Escape') {
+                closeMenuAction();
+                return;
+            }
+            if (event.key !== 'Tab' || mobileFocusable.length === 0) return;
+            const first = mobileFocusable[0];
+            const last = mobileFocusable[mobileFocusable.length - 1];
+            if (event.shiftKey && document.activeElement === first) {
+                event.preventDefault();
+                last.focus();
+            } else if (!event.shiftKey && document.activeElement === last) {
+                event.preventDefault();
+                first.focus();
+            }
+        });
+
+        /* ACCORDIONS */
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach((item, index) => {
+            const trigger = item.querySelector('.faq-trigger');
+            const content = item.querySelector('.faq-content');
+            const icon = item.querySelector('.faq-trigger svg, .faq-trigger i');
+            if (!trigger || !content) return;
+
+            const contentId = content.id || `treatment-details-${index + 1}`;
+            content.id = contentId;
+            trigger.setAttribute('aria-controls', contentId);
+            trigger.setAttribute('aria-expanded', 'false');
+            content.setAttribute('role', 'region');
+            content.setAttribute('aria-hidden', 'true');
+
+            trigger.addEventListener('click', () => {
+                const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+
+                faqItems.forEach(otherItem => {
+                    const otherTrigger = otherItem.querySelector('.faq-trigger');
+                    const otherContent = otherItem.querySelector('.faq-content');
+                    const otherIcon = otherItem.querySelector('.faq-trigger svg, .faq-trigger i');
+                    if (!otherTrigger || !otherContent) return;
+                    otherContent.style.maxHeight = '0px';
+                    otherTrigger.setAttribute('aria-expanded', 'false');
+                    otherContent.setAttribute('aria-hidden', 'true');
+                    otherItem.classList.remove('bg-white', 'border-brand-gold/30');
+                    if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+                });
+
+                if (!isOpen) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    trigger.setAttribute('aria-expanded', 'true');
+                    content.setAttribute('aria-hidden', 'false');
+                    item.classList.add('bg-white', 'border-brand-gold/30');
+                    if (icon) icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });    </script>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/919871731008" target="_blank" rel="noopener noreferrer" class="whatsapp-float fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:bg-[#20ba56] active:scale-95 transition-colors duration-300 flex items-center justify-center group cursor-pointer-target" aria-label="Chat on WhatsApp">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" class="w-7 h-7 fill-white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.438 2.5 1.177 3.464L6.96 17.585l2.25-.737c.895.547 1.942.862 3.061.862 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm3.39 8.163c-.15.424-.755.764-1.042.812-.249.043-.572.077-1.574-.337-1.278-.53-2.083-1.81-2.147-1.896-.063-.086-.511-.68-.511-1.296 0-.616.323-.918.439-1.04.116-.123.254-.154.339-.154.086 0 .17.001.244.005.078.004.18-.03.282.214.106.255.362.882.394.945.032.064.053.138.01.223-.042.086-.064.138-.127.213-.064.074-.133.165-.191.223-.064.064-.13.133-.056.26.074.123.33 1.353 1.054 1.996.619.549 1.141.718 1.3.785.16.069.255.059.35-.053.097-.112.414-.483.525-.648.112-.165.223-.138.377-.08.154.058.977.461 1.147.546.17.085.282.127.324.197.042.07.042.404-.108.828zM12 2C6.477 2 2 6.477 2 12c0 1.768.458 3.431 1.263 4.887L2 22l5.258-1.222C8.655 21.56 10.274 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.477 0-2.88-.383-4.108-1.054l-.294-.162-3.053.71.722-2.635-.19-.301A7.954 7.954 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/>
+        </svg>
+        <span class="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 text-sm font-semibold tracking-wide whitespace-nowrap transition-all duration-300">
+            Chat with us
+        </span>
+    </a>
+</body>
+</html>
