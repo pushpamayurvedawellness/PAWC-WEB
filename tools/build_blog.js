@@ -494,12 +494,12 @@ function head({ title, description, canonical, image, schema, assetPrefix = '../
 }
 
 function nav(prefix = '../') {
-  return `<nav aria-label="Primary" class="sticky top-0 z-40 bg-[#f3f7f5]/95 backdrop-blur-md border-b border-brand-cream-sand/70">
+  return `<nav aria-label="Primary" class="sticky top-0 z-40 bg-[#221f1e]/96 backdrop-blur-md border-b border-brand-gold/10">
     <div class="max-w-[1400px] mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
         <a href="${prefix}index.html" aria-label="Pushpam Ayurveda home" class="flex items-center">
-            <img src="${prefix}Pushpam Logo Horizontal Dark.svg" alt="Pushpam Ayurveda Wellness Centre Logo" class="h-14 w-auto object-contain">
+            <img src="${prefix}Pushpam Logo Horizontal Light.svg" alt="Pushpam Ayurveda Wellness Centre Logo" class="h-14 w-auto object-contain">
         </a>
-        <div class="hidden lg:flex items-center space-x-10 text-[0.95rem] font-medium text-brand-charcoal-muted">
+        <div class="hidden lg:flex items-center space-x-10 text-[0.95rem] font-medium text-white/88">
             <a href="${prefix}index.html" class="hover:text-brand-gold transition-colors">Home</a>
             <a href="${prefix}about.html" class="hover:text-brand-gold transition-colors">About</a>
             <a href="${prefix}treatments.html" class="hover:text-brand-gold transition-colors">Treatments</a>
@@ -507,9 +507,14 @@ function nav(prefix = '../') {
             <a href="${prefix}blog.html" class="text-brand-gold">Blog</a>
             <a href="${prefix}corporate-wellness.html" class="hover:text-brand-gold transition-colors">Corporate Wellness</a>
         </div>
-        <a href="tel:+919871731008" class="hidden sm:inline-flex items-center gap-2 rounded-full bg-brand-deep text-brand-gold-light px-5 py-3 text-sm font-bold">
-            <i data-lucide="phone" class="w-4 h-4"></i> Call Clinic
-        </a>
+        <div class="hidden sm:flex items-center gap-5">
+            <a href="tel:+919871731008" class="hidden lg:inline-flex items-center gap-2 text-sm font-medium text-white/88 hover:text-brand-gold transition-colors">
+                <i data-lucide="phone" class="w-4 h-4"></i> Call Clinic
+            </a>
+            <a href="${prefix}index.html#book" class="inline-flex items-center justify-center rounded-full border border-brand-gold text-brand-gold-light px-7 py-3.5 text-sm font-bold hover:bg-brand-gold hover:text-brand-darkest transition-colors">
+                Book Consultation
+            </a>
+        </div>
     </div>
 </nav>`;
 }
@@ -624,15 +629,16 @@ function postHtml(post, index) {
 ${nav('../')}
 <main>
     <article>
-        <header class="bg-gradient-to-br from-[#f3f7f5] via-[#f8f5ee] to-[#e8f0eb] border-b border-brand-cream-sand/60">
-            <div class="max-w-[1180px] mx-auto px-5 sm:px-6 lg:px-10 py-14 lg:py-20 grid gap-10 lg:grid-cols-[0.95fr_0.85fr] lg:items-center">
+        <header class="bg-gradient-to-br from-[#1b1918] via-[#221f1e] to-[#2d2927] border-b border-brand-gold/10 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-[0.035] pointer-events-none" style="background-image: radial-gradient(circle at 1px 1px, #A86728 1px, transparent 0); background-size: 24px 24px;"></div>
+            <div class="max-w-[1180px] mx-auto px-5 sm:px-6 lg:px-10 py-16 lg:py-24 grid gap-10 lg:grid-cols-[0.95fr_0.85fr] lg:items-center relative z-10">
                 <div>
-                    <a href="../blog.html" class="inline-flex items-center gap-2 text-sm font-bold text-brand-gold hover:text-brand-deep transition-colors mb-6"><i data-lucide="arrow-left" class="w-4 h-4"></i> Blog</a>
+                    <a href="../blog.html" class="inline-flex items-center gap-2 text-sm font-bold text-brand-gold hover:text-brand-gold-light transition-colors mb-6"><i data-lucide="arrow-left" class="w-4 h-4"></i> Blog</a>
                     <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand-gold mb-4">${esc(post.category)}</p>
-                    <h1 class="font-display text-4xl sm:text-5xl lg:text-[4rem] leading-tight font-medium text-brand-darkest">${esc(post.title)}</h1>
-                    <p class="mt-6 text-lg text-brand-charcoal-muted leading-relaxed max-w-3xl">${esc(post.description)}</p>
+                    <h1 class="font-display text-4xl sm:text-5xl lg:text-[4rem] leading-tight font-medium text-white">${esc(post.title)}</h1>
+                    <p class="mt-6 text-lg text-brand-gold-light/78 leading-relaxed max-w-3xl">${esc(post.description)}</p>
                 </div>
-                <div class="rounded-2xl overflow-hidden border border-brand-gold/20 shadow-xl shadow-brand-deep/10 bg-white">
+                <div class="rounded-2xl overflow-hidden border border-brand-gold/25 shadow-2xl shadow-black/25 bg-brand-darkest">
                     <img src="${post.image}" alt="${esc(post.shortTitle)} explained with Ayurvedic context" class="w-full aspect-[4/3] object-cover" loading="eager">
                 </div>
             </div>
@@ -706,11 +712,12 @@ function blogIndexHtml() {
 <body class="bg-brand-cream-light text-brand-charcoal antialiased selection:bg-brand-gold selection:text-brand-darkest">
 ${nav('./')}
 <main>
-    <section class="bg-gradient-to-br from-[#f3f7f5] via-[#f8f5ee] to-[#e8f0eb] border-b border-brand-cream-sand/60">
-        <div class="max-w-[1240px] mx-auto px-5 sm:px-6 lg:px-10 py-16 lg:py-24">
+    <section class="bg-gradient-to-br from-[#1b1918] via-[#221f1e] to-[#2d2927] border-b border-brand-gold/10 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.035] pointer-events-none" style="background-image: radial-gradient(circle at 1px 1px, #A86728 1px, transparent 0); background-size: 24px 24px;"></div>
+        <div class="max-w-[1240px] mx-auto px-5 sm:px-6 lg:px-10 py-20 lg:py-28 text-center relative z-10">
             <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand-gold mb-4">Ayurveda Insights</p>
-            <h1 class="font-display text-5xl lg:text-[4.75rem] leading-tight font-medium text-brand-darkest max-w-4xl">Simple guides for people trying to understand Ayurvedic care.</h1>
-            <p class="mt-6 text-lg text-brand-charcoal-muted leading-relaxed max-w-3xl">Each guide is written to be easy to grasp, clinically grounded and useful before a consultation. Start with the condition or question closest to what you are experiencing.</p>
+            <h1 class="font-display text-5xl lg:text-[4.75rem] leading-tight font-medium text-white max-w-5xl mx-auto">Simple guides for people trying to understand Ayurvedic care.</h1>
+            <p class="mt-6 text-lg text-brand-gold-light/78 leading-relaxed max-w-3xl mx-auto">Each guide is written to be easy to grasp, clinically grounded and useful before a consultation. Start with the condition or question closest to what you are experiencing.</p>
         </div>
     </section>
 
