@@ -495,11 +495,11 @@ function head({ title, description, canonical, image, schema, assetPrefix = '../
 
 function nav(prefix = '../') {
   return `<nav aria-label="Primary" class="sticky top-0 z-40 bg-[#f3f7f5]/95 backdrop-blur-md border-b border-brand-cream-sand/70">
-    <div class="max-w-[1240px] mx-auto px-5 sm:px-6 lg:px-10 h-20 flex items-center justify-between">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
         <a href="${prefix}index.html" aria-label="Pushpam Ayurveda home" class="flex items-center">
-            <img src="${prefix}Pushpam Logo Horizontal Dark.svg" alt="Pushpam Ayurveda Wellness Centre Logo" class="h-12 w-auto object-contain">
+            <img src="${prefix}Pushpam Logo Horizontal Dark.svg" alt="Pushpam Ayurveda Wellness Centre Logo" class="h-14 w-auto object-contain">
         </a>
-        <div class="hidden lg:flex items-center gap-8 text-sm font-semibold text-brand-charcoal-muted">
+        <div class="hidden lg:flex items-center space-x-10 text-[0.95rem] font-medium text-brand-charcoal-muted">
             <a href="${prefix}index.html" class="hover:text-brand-gold transition-colors">Home</a>
             <a href="${prefix}about.html" class="hover:text-brand-gold transition-colors">About</a>
             <a href="${prefix}treatments.html" class="hover:text-brand-gold transition-colors">Treatments</a>
@@ -515,17 +515,26 @@ function nav(prefix = '../') {
 }
 
 function footer(prefix = '../') {
-  return `<footer class="bg-brand-deep text-brand-gold-light py-10">
-    <div class="max-w-[1240px] mx-auto px-5 sm:px-6 lg:px-10 grid gap-6 md:grid-cols-[1fr_auto] md:items-center">
-        <div>
-            <img src="${prefix}Pushpam Logo Horizontal Light.svg" alt="Pushpam Ayurveda Wellness Centre Logo" class="h-12 w-auto mb-4">
-            <p class="text-sm text-brand-gold-light/75 max-w-xl">Pushpam Ayurveda Wellness Centre, JP Nagar, Bangalore. Doctor-led Ayurvedic consultations, Panchakarma and chronic condition care.</p>
+  return `<footer class="bg-brand-darkest text-brand-gold-light pt-24 pb-8 relative overflow-hidden">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-12 md:items-center mb-14">
+            <div class="space-y-6">
+                <a href="${prefix}index.html" aria-label="Pushpam Ayurveda home">
+                    <img src="${prefix}Pushpam Logo Horizontal Dark.svg" alt="Pushpam Ayurveda Wellness Centre Logo" class="h-16 w-auto object-contain">
+                </a>
+                <p class="text-xs text-brand-sage leading-relaxed max-w-md">Pushpam Ayurveda Wellness Centre, JP Nagar, Bangalore. Doctor-led Ayurvedic consultations, Panchakarma and chronic condition care.</p>
+            </div>
+            <div class="flex flex-wrap gap-5 text-sm text-brand-sage">
+                <a href="${prefix}index.html" class="hover:text-brand-gold transition-colors">Home</a>
+                <a href="${prefix}treatments.html" class="hover:text-brand-gold transition-colors">Treatments</a>
+                <a href="${prefix}doctors.html" class="hover:text-brand-gold transition-colors">Doctors</a>
+                <a href="${prefix}blog.html" class="hover:text-brand-gold transition-colors">Blog</a>
+                <a href="https://wa.me/919871731008" class="hover:text-brand-gold transition-colors">WhatsApp</a>
+            </div>
         </div>
-        <div class="flex flex-wrap gap-3 text-sm">
-            <a href="${prefix}index.html" class="hover:text-brand-gold">Home</a>
-            <a href="${prefix}treatments.html" class="hover:text-brand-gold">Treatments</a>
-            <a href="${prefix}blog.html" class="hover:text-brand-gold">Blog</a>
-            <a href="https://wa.me/919871731008" class="hover:text-brand-gold">WhatsApp</a>
+        <div class="pt-8 border-t border-brand-gold/10 flex flex-col md:flex-row justify-between gap-4 text-[11px] text-brand-sage/70">
+            <p>&copy; 2026 Pushpam Ayurveda Wellness Centre. All rights reserved.</p>
+            <p>Educational content only. Consult a qualified physician for diagnosis and treatment.</p>
         </div>
     </div>
 </footer>
