@@ -4,6 +4,7 @@ description: "Understand Panchakarma beyond the word detox: preparation, elimina
 category: "Panchakarma"
 date: "2026-07-11"
 image: "../assets/conditions/preventive-panchakarma.jpg"
+inline_image: "../therapy_panchakarma.png"
 keywords:
   - "Panchakarma detox Bangalore"
   - "Ayurvedic detox meaning"
@@ -33,6 +34,25 @@ Depending on the case, Panchakarma may support chronic pain, stiffness, skin con
 
 Pregnancy, severe weakness, uncontrolled illness, active infection, certain heart conditions and very acute disease stages require caution. Panchakarma should be doctor supervised, not selected from a menu like a spa service.
 
+## The clean way to judge a Panchakarma plan
+
+- The doctor should first check strength, digestion, age, season and current medicines.
+- Preparation matters because the body should not be pushed into a strong cleanse suddenly.
+- Aftercare is not optional; it is where many benefits are protected.
+- A good plan feels specific to your condition, not like a fixed package.
+
+## Before you start Panchakarma, ask
+
+- Why is this procedure suitable for me right now?
+- What should I eat before, during and after treatment?
+- What signs mean we should slow down or change the plan?
+
+## Related reading
+
+- [Preventive Ayurveda: Why You Should Not Wait Until You Are Sick](../../blog/seasonal-panchakarma-preventive-ayurveda.html)
+- [IBS, Bloating and Acidity: Ayurveda’s Simple Idea of Agni](../../blog/ibs-digestion-agni-ayurveda.html)
+- [How to Choose an Ayurveda Hospital or Wellness Centre in Bangalore](../../blog/how-to-choose-ayurveda-hospital-bangalore.html)
+
 ## Questions patients often ask
 
 ### Is Panchakarma painful?
@@ -46,3 +66,8 @@ It can range from a few days of supportive care to a longer classical plan. The 
 ### Can healthy people do Panchakarma?
 
 Yes, preventive Panchakarma may be useful, especially seasonally, but it still needs assessment.
+
+## Useful references
+
+- [WHO: traditional, complementary and integrative medicine](https://www.who.int/health-topics/traditional-complementary-and-integrative-medicine)
+- [NCCIH: Ayurvedic medicine in depth](https://www.nccih.nih.gov/health/ayurvedic-medicine-in-depth)

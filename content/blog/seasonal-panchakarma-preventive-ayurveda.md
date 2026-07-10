@@ -4,6 +4,7 @@ description: "Learn how seasonal Panchakarma, diet, sleep and lifestyle counseli
 category: "Preventive Care"
 date: "2026-07-18"
 image: "../assets/conditions/preventive-panchakarma.jpg"
+inline_image: "../ayurveda_recovery_set.png"
 keywords:
   - "preventive Ayurveda Bangalore"
   - "seasonal Panchakarma"
@@ -33,6 +34,25 @@ Ayurveda pays attention to climate because the body responds to heat, cold, rain
 
 The best treatment is sometimes the one that prevents a problem from needing treatment later.
 
+## Small symptoms worth respecting
+
+- Repeated acidity after travel or late nights is not random.
+- Seasonal skin or sinus flare-ups can reveal predictable body patterns.
+- Low energy after meals often says more about digestion than willpower.
+- The earlier the pattern is seen, the gentler the plan can be.
+
+## Ask during a preventive visit
+
+- Which season tends to disturb my body most?
+- What is the smallest useful routine change for me?
+- Do I need Panchakarma, herbs, diet correction, or only monitoring right now?
+
+## Related reading
+
+- [Panchakarma Detox: What It Really Means in Ayurveda](../../blog/panchakarma-detox-meaning-benefits.html)
+- [Stress, Sleep and Burnout: An Ayurvedic Way to Reset the Nervous System](../../blog/stress-sleep-burnout-ayurveda.html)
+- [How to Choose an Ayurveda Hospital or Wellness Centre in Bangalore](../../blog/how-to-choose-ayurveda-hospital-bangalore.html)
+
 ## Questions patients often ask
 
 ### Can I consult Ayurveda even if I am healthy?
@@ -46,3 +66,8 @@ It depends on age, stress, season and health goals. Many people benefit from sea
 ### Is preventive Panchakarma intense?
 
 Not always. It should match the person’s strength and need.
+
+## Useful references
+
+- [WHO: traditional and integrative medicine](https://www.who.int/health-topics/traditional-complementary-and-integrative-medicine)
+- [NCCIH: Ayurvedic medicine in depth](https://www.nccih.nih.gov/health/ayurvedic-medicine-in-depth)

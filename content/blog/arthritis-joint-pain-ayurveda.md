@@ -4,6 +4,7 @@ description: "A clear guide to Ayurvedic care for knee pain, arthritis, stiffnes
 category: "Pain Management"
 date: "2026-07-17"
 image: "../assets/conditions/joint-arthritis.jpg"
+inline_image: "../therapy_abhyanga.png"
 keywords:
   - "arthritis Ayurveda Bangalore"
   - "joint pain Ayurveda"
@@ -33,6 +34,25 @@ Care may include internal medicines, oil therapies, fomentation, diet correction
 
 Sudden swelling, severe redness, fever, trauma, deformity or rapidly worsening pain needs medical evaluation. Joint pain can have many causes.
 
+## Decode the joint before treating it
+
+- Dry cracking stiffness is a different clue from hot swelling.
+- Morning stiffness and evening pain can point to different drivers.
+- Warmth helping or worsening pain is important treatment information.
+- Joint pain with fever, redness or sudden swelling needs medical assessment.
+
+## Questions that sharpen the plan
+
+- Is oil therapy suitable, or is inflammation too active right now?
+- What movement should I do daily without aggravating pain?
+- Which foods may be feeding stiffness or swelling?
+
+## Related reading
+
+- [Ayurvedic Treatment for Disc Bulge and Back Pain: What Actually Helps?](../../blog/ayurvedic-treatment-for-disc-bulge-back-pain.html)
+- [Panchakarma Detox: What It Really Means in Ayurveda](../../blog/panchakarma-detox-meaning-benefits.html)
+- [Preventive Ayurveda: Why You Should Not Wait Until You Are Sick](../../blog/seasonal-panchakarma-preventive-ayurveda.html)
+
 ## Questions patients often ask
 
 ### Can Ayurveda help arthritis?
@@ -46,3 +66,7 @@ Usually gentle movement helps, but the type and timing matter. Acute swelling ne
 ### Are oils enough?
 
 External oils help some patterns, but chronic joint pain often needs internal and lifestyle correction too.
+
+## Useful references
+
+- [NCCIH: evidence notes on Ayurveda and osteoarthritis](https://www.nccih.nih.gov/health/ayurvedic-medicine-in-depth)

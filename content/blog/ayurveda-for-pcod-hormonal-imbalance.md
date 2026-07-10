@@ -4,6 +4,7 @@ description: "A clear guide to Ayurveda for PCOD, irregular periods, weight gain
 category: "Women’s Health"
 date: "2026-07-12"
 image: "../assets/conditions/pcod-hormonal.jpg"
+inline_image: "../condition_pcod.png"
 keywords:
   - "Ayurveda for PCOD"
   - "PCOD treatment Bangalore"
@@ -33,6 +34,25 @@ Treatment may include herbs, cycle-specific support, food timing, insulin-friend
 
 A regular period is a result, not just a target. When digestion, stress and metabolism improve, the cycle often has a better chance to organize itself.
 
+## The useful PCOD mental model
+
+- Irregular periods are often the visible signal of a wider metabolic rhythm problem.
+- Acne, cravings, weight change and fatigue are not separate complaints; they help map the pattern.
+- Food timing can matter as much as food choice for many patients.
+- Progress is better tracked through cycle, energy, skin, cravings and waist change together.
+
+## Questions to take to the doctor
+
+- Are my symptoms showing more Kapha, Pitta, Vata, or a mixed pattern?
+- What should my breakfast and dinner timing look like?
+- Which lab reports should I keep monitoring?
+
+## Related reading
+
+- [Thyroid and Ayurveda: Why Energy, Weight and Digestion Matter](../../blog/thyroid-and-ayurveda-simple-guide.html)
+- [Acne, Eczema and Psoriasis: How Ayurveda Reads the Skin](../../blog/ayurvedic-treatment-for-acne-eczema-psoriasis.html)
+- [IBS, Bloating and Acidity: Ayurveda’s Simple Idea of Agni](../../blog/ibs-digestion-agni-ayurveda.html)
+
 ## Questions patients often ask
 
 ### Can Ayurveda cure PCOD permanently?
@@ -46,3 +66,8 @@ Do not stop prescribed medicine without your doctor’s guidance. Ayurveda can o
 ### Is diet important in PCOD?
 
 Yes. Food timing, protein, sugar control and digestion support are central to PCOD care.
+
+## Useful references
+
+- [NHS: polyendocrine metabolic ovarian syndrome information](https://www.nhs.uk/conditions/polyendocrine-metabolic-ovarian-syndrome-pmos/)
+- [NCCIH: Ayurvedic medicine safety overview](https://www.nccih.nih.gov/health/ayurvedic-medicine-in-depth)

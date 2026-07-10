@@ -4,6 +4,7 @@ description: "A simple explanation of Ayurvedic skin treatment for acne, eczema,
 category: "Skin Health"
 date: "2026-07-14"
 image: "../assets/conditions/skin-conditions.jpg"
+inline_image: "../condition_skin.png"
 keywords:
   - "Ayurvedic skin treatment Bangalore"
   - "psoriasis Ayurveda"
@@ -33,6 +34,25 @@ Treatment may include internal medicines, external applications, food correction
 
 A skin flare is like a warning light. Turning off the light is not enough if the engine is still overheating.
 
+## A better way to track skin flare-ups
+
+- Note heat, itching, scaling, oiliness or dryness separately.
+- Track the previous 48 hours of food, sleep, stress and bowel changes.
+- Photograph flare-ups in the same light so progress is easier to compare.
+- Do not judge improvement only by one good day; look at flare frequency.
+
+## Smart consultation questions
+
+- Is my skin pattern more heat, dryness, oiliness or immune flare?
+- Which foods are likely triggers for my pattern?
+- Do I need internal medicines, external care, Panchakarma, or a phased plan?
+
+## Related reading
+
+- [IBS, Bloating and Acidity: Ayurveda’s Simple Idea of Agni](../../blog/ibs-digestion-agni-ayurveda.html)
+- [Ayurveda for PCOD: A Simple Way to Understand Hormonal Imbalance](../../blog/ayurveda-for-pcod-hormonal-imbalance.html)
+- [Panchakarma Detox: What It Really Means in Ayurveda](../../blog/panchakarma-detox-meaning-benefits.html)
+
 ## Questions patients often ask
 
 ### Can Ayurveda help psoriasis?
@@ -46,3 +66,7 @@ Usually some food correction is needed, but it should be practical and specific,
 ### Are external oils enough?
 
 For recurrent conditions, external care alone is usually not enough. Internal correction matters.
+
+## Useful references
+
+- [NCCIH: Ayurvedic medicine safety and evidence](https://www.nccih.nih.gov/health/ayurvedic-medicine-in-depth)

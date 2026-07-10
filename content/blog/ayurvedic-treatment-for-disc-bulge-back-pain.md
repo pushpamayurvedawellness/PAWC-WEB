@@ -4,6 +4,7 @@ description: "A simple guide to how Ayurveda approaches L4-L5, L5-S1 disc bulge,
 category: "Pain Management"
 date: "2026-07-10"
 image: "../assets/conditions/back-pain-disc.jpg"
+inline_image: "../therapy_katibasti.png"
 keywords:
   - "Ayurvedic treatment for disc bulge"
   - "back pain Ayurveda Bangalore"
@@ -33,6 +34,25 @@ Care may include internal medicines, local therapies such as Kati Basti, Abhyang
 
 If there is loss of bladder or bowel control, progressive leg weakness, numbness in the saddle area, fever with back pain, or severe trauma, do not wait for routine treatment. Seek urgent medical care. Ayurveda can be supportive, but red flags need immediate assessment.
 
+## A 60-second way to read your back pain
+
+- Pain moving below the knee usually needs nerve-focused assessment, not only muscle massage.
+- Morning stiffness, night pain and sitting pain each point to different aggravating patterns.
+- A scan finding is useful, but the treatment plan should also track strength, sensation and daily function.
+- Red flags like bladder changes or progressive weakness need urgent medical care.
+
+## Questions worth asking in consultation
+
+- Is my pain mainly inflammatory, nerve-related, muscle guarding, or mixed?
+- Which activities should I avoid for two weeks, and which movements are safe?
+- How will we measure improvement beyond pain score?
+
+## Related reading
+
+- [Panchakarma Detox: What It Really Means in Ayurveda](../../blog/panchakarma-detox-meaning-benefits.html)
+- [Joint Pain and Arthritis: Why Ayurveda Looks at Stiffness, Swelling and Digestion](../../blog/arthritis-joint-pain-ayurveda.html)
+- [How to Choose an Ayurveda Hospital or Wellness Centre in Bangalore](../../blog/how-to-choose-ayurveda-hospital-bangalore.html)
+
 ## Questions patients often ask
 
 ### Can Ayurveda help avoid spine surgery?
@@ -46,3 +66,8 @@ No. Some patients need local therapies and medicines first. Panchakarma is chose
 ### How long does back pain treatment take?
 
 Acute pain may improve faster. Chronic or recurring pain usually needs a longer plan that includes strengthening habits, posture and digestion correction.
+
+## Useful references
+
+- [NCBI Bookshelf: lumbar disc herniation overview](https://www.ncbi.nlm.nih.gov/books/NBK441822/)
+- [NCCIH: Ayurvedic medicine safety and evidence overview](https://www.nccih.nih.gov/health/ayurvedic-medicine-in-depth)

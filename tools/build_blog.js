@@ -238,6 +238,231 @@ function slugDatePrefix(index) {
   return `2026-07-${String(10 + index).padStart(2, '0')}`;
 }
 
+const postExtras = {
+  'ayurvedic-treatment-for-disc-bulge-back-pain': {
+    inlineImage: '../therapy_katibasti.png',
+    imageCaption: 'Back pain care becomes clearer when the scan, pain pathway, stiffness, sleep and daily posture are read together.',
+    rewardTitle: 'A 60-second way to read your back pain',
+    rewardItems: [
+      'Pain moving below the knee usually needs nerve-focused assessment, not only muscle massage.',
+      'Morning stiffness, night pain and sitting pain each point to different aggravating patterns.',
+      'A scan finding is useful, but the treatment plan should also track strength, sensation and daily function.',
+      'Red flags like bladder changes or progressive weakness need urgent medical care.'
+    ],
+    askTitle: 'Questions worth asking in consultation',
+    askItems: [
+      'Is my pain mainly inflammatory, nerve-related, muscle guarding, or mixed?',
+      'Which activities should I avoid for two weeks, and which movements are safe?',
+      'How will we measure improvement beyond pain score?'
+    ],
+    related: ['panchakarma-detox-meaning-benefits', 'arthritis-joint-pain-ayurveda', 'how-to-choose-ayurveda-hospital-bangalore'],
+    sources: [
+      ['NCBI Bookshelf: lumbar disc herniation overview', 'https://www.ncbi.nlm.nih.gov/books/NBK441822/'],
+      ['NCCIH: Ayurvedic medicine safety and evidence overview', 'https://www.nccih.nih.gov/health/ayurvedic-medicine-in-depth']
+    ]
+  },
+  'panchakarma-detox-meaning-benefits': {
+    inlineImage: '../therapy_panchakarma.png',
+    imageCaption: 'Panchakarma is strongest when it is planned like a clinical sequence: prepare, cleanse appropriately, recover well.',
+    rewardTitle: 'The clean way to judge a Panchakarma plan',
+    rewardItems: [
+      'The doctor should first check strength, digestion, age, season and current medicines.',
+      'Preparation matters because the body should not be pushed into a strong cleanse suddenly.',
+      'Aftercare is not optional; it is where many benefits are protected.',
+      'A good plan feels specific to your condition, not like a fixed package.'
+    ],
+    askTitle: 'Before you start Panchakarma, ask',
+    askItems: [
+      'Why is this procedure suitable for me right now?',
+      'What should I eat before, during and after treatment?',
+      'What signs mean we should slow down or change the plan?'
+    ],
+    related: ['seasonal-panchakarma-preventive-ayurveda', 'ibs-digestion-agni-ayurveda', 'how-to-choose-ayurveda-hospital-bangalore'],
+    sources: [
+      ['WHO: traditional, complementary and integrative medicine', 'https://www.who.int/health-topics/traditional-complementary-and-integrative-medicine'],
+      ['NCCIH: Ayurvedic medicine in depth', 'https://www.nccih.nih.gov/health/ayurvedic-medicine-in-depth']
+    ]
+  },
+  'ayurveda-for-pcod-hormonal-imbalance': {
+    inlineImage: '../condition_pcod.png',
+    imageCaption: 'PCOD care is easier to understand when cycle rhythm, insulin response, skin, sleep and stress are seen as one connected pattern.',
+    rewardTitle: 'The useful PCOD mental model',
+    rewardItems: [
+      'Irregular periods are often the visible signal of a wider metabolic rhythm problem.',
+      'Acne, cravings, weight change and fatigue are not separate complaints; they help map the pattern.',
+      'Food timing can matter as much as food choice for many patients.',
+      'Progress is better tracked through cycle, energy, skin, cravings and waist change together.'
+    ],
+    askTitle: 'Questions to take to the doctor',
+    askItems: [
+      'Are my symptoms showing more Kapha, Pitta, Vata, or a mixed pattern?',
+      'What should my breakfast and dinner timing look like?',
+      'Which lab reports should I keep monitoring?'
+    ],
+    related: ['thyroid-and-ayurveda-simple-guide', 'ayurvedic-treatment-for-acne-eczema-psoriasis', 'ibs-digestion-agni-ayurveda'],
+    sources: [
+      ['NHS: polyendocrine metabolic ovarian syndrome information', 'https://www.nhs.uk/conditions/polyendocrine-metabolic-ovarian-syndrome-pmos/'],
+      ['NCCIH: Ayurvedic medicine safety overview', 'https://www.nccih.nih.gov/health/ayurvedic-medicine-in-depth']
+    ]
+  },
+  'thyroid-and-ayurveda-simple-guide': {
+    inlineImage: '../condition_thyroid.png',
+    imageCaption: 'Thyroid symptoms often show up as a lived pattern: energy, bowels, temperature, sleep, hair and mood.',
+    rewardTitle: 'What your thyroid diary should include',
+    rewardItems: [
+      'Energy dips: note the time of day, not just that you feel tired.',
+      'Bowels: constipation or looseness can change the treatment conversation.',
+      'Temperature sensitivity: feeling cold or heat-intolerant is useful context.',
+      'Hair fall, swelling and mood shifts help complete the picture.'
+    ],
+    askTitle: 'Bring these questions',
+    askItems: [
+      'How do my lab values connect with my symptoms?',
+      'Can Ayurvedic support be coordinated with my current thyroid medicine?',
+      'Which food habits are slowing digestion or energy?'
+    ],
+    related: ['ayurveda-for-pcod-hormonal-imbalance', 'ibs-digestion-agni-ayurveda', 'stress-sleep-burnout-ayurveda'],
+    sources: [
+      ['NCCIH: Ayurvedic medicine in depth', 'https://www.nccih.nih.gov/health/ayurvedic-medicine-in-depth'],
+      ['WHO: traditional and integrative medicine', 'https://www.who.int/health-topics/traditional-complementary-and-integrative-medicine']
+    ]
+  },
+  'ayurvedic-treatment-for-acne-eczema-psoriasis': {
+    inlineImage: '../condition_skin.png',
+    imageCaption: 'Skin treatment becomes more useful when visible flare-ups are connected with digestion, heat, stress and triggers.',
+    rewardTitle: 'A better way to track skin flare-ups',
+    rewardItems: [
+      'Note heat, itching, scaling, oiliness or dryness separately.',
+      'Track the previous 48 hours of food, sleep, stress and bowel changes.',
+      'Photograph flare-ups in the same light so progress is easier to compare.',
+      'Do not judge improvement only by one good day; look at flare frequency.'
+    ],
+    askTitle: 'Smart consultation questions',
+    askItems: [
+      'Is my skin pattern more heat, dryness, oiliness or immune flare?',
+      'Which foods are likely triggers for my pattern?',
+      'Do I need internal medicines, external care, Panchakarma, or a phased plan?'
+    ],
+    related: ['ibs-digestion-agni-ayurveda', 'ayurveda-for-pcod-hormonal-imbalance', 'panchakarma-detox-meaning-benefits'],
+    sources: [
+      ['NCCIH: Ayurvedic medicine safety and evidence', 'https://www.nccih.nih.gov/health/ayurvedic-medicine-in-depth']
+    ]
+  },
+  'ibs-digestion-agni-ayurveda': {
+    inlineImage: '../condition_digestive.png',
+    imageCaption: 'Digestive care starts to make sense when acidity, bloating, appetite, bowel rhythm and stress are separated clearly.',
+    rewardTitle: 'The Agni check-in',
+    rewardItems: [
+      'Do you feel hungry at regular times, or only when food is in front of you?',
+      'Do symptoms worsen after raw foods, late dinners, dairy, fried foods or stress?',
+      'Is the main problem burning, gas, heaviness, urgency or constipation?',
+      'Can you identify your safest meal when digestion is disturbed?'
+    ],
+    askTitle: 'Ask this before taking herbs',
+    askItems: [
+      'Is my digestion too sharp, too weak, too slow, or too irregular?',
+      'Which two food changes should I start with first?',
+      'When should I seek testing for persistent digestive symptoms?'
+    ],
+    related: ['panchakarma-detox-meaning-benefits', 'ayurvedic-treatment-for-acne-eczema-psoriasis', 'stress-sleep-burnout-ayurveda'],
+    sources: [
+      ['NCCIH: Ayurvedic medicine overview', 'https://www.nccih.nih.gov/health/ayurvedic-medicine-in-depth']
+    ]
+  },
+  'stress-sleep-burnout-ayurveda': {
+    inlineImage: '../therapy_shirodhara.png',
+    imageCaption: 'Stress care is not only relaxation; it is rebuilding a rhythm the nervous system can trust.',
+    rewardTitle: 'The overlooked sleep clue',
+    rewardItems: [
+      'Trouble falling asleep often points to a different pattern than waking at 3 am.',
+      'Heavy mornings can mean the evening routine or dinner timing needs attention.',
+      'Dream intensity, jaw tension and caffeine timing are useful clues.',
+      'Resting is not the same as recovery if the mind stays stimulated.'
+    ],
+    askTitle: 'Useful questions for burnout care',
+    askItems: [
+      'Am I overstimulated, depleted, or both?',
+      'Which evening routine change will give the fastest signal?',
+      'Is Shirodhara suitable for me, or should we begin more gently?'
+    ],
+    related: ['ibs-digestion-agni-ayurveda', 'thyroid-and-ayurveda-simple-guide', 'seasonal-panchakarma-preventive-ayurveda'],
+    sources: [
+      ['WHO: traditional, complementary and integrative medicine', 'https://www.who.int/health-topics/traditional-complementary-and-integrative-medicine']
+    ]
+  },
+  'arthritis-joint-pain-ayurveda': {
+    inlineImage: '../therapy_abhyanga.png',
+    imageCaption: 'Joint pain care changes depending on whether the joint is dry, swollen, hot, stiff, heavy or unstable.',
+    rewardTitle: 'Decode the joint before treating it',
+    rewardItems: [
+      'Dry cracking stiffness is a different clue from hot swelling.',
+      'Morning stiffness and evening pain can point to different drivers.',
+      'Warmth helping or worsening pain is important treatment information.',
+      'Joint pain with fever, redness or sudden swelling needs medical assessment.'
+    ],
+    askTitle: 'Questions that sharpen the plan',
+    askItems: [
+      'Is oil therapy suitable, or is inflammation too active right now?',
+      'What movement should I do daily without aggravating pain?',
+      'Which foods may be feeding stiffness or swelling?'
+    ],
+    related: ['ayurvedic-treatment-for-disc-bulge-back-pain', 'panchakarma-detox-meaning-benefits', 'seasonal-panchakarma-preventive-ayurveda'],
+    sources: [
+      ['NCCIH: evidence notes on Ayurveda and osteoarthritis', 'https://www.nccih.nih.gov/health/ayurvedic-medicine-in-depth']
+    ]
+  },
+  'seasonal-panchakarma-preventive-ayurveda': {
+    inlineImage: '../ayurveda_recovery_set.png',
+    imageCaption: 'Preventive Ayurveda works best when small signals are noticed before they become repeated problems.',
+    rewardTitle: 'Small symptoms worth respecting',
+    rewardItems: [
+      'Repeated acidity after travel or late nights is not random.',
+      'Seasonal skin or sinus flare-ups can reveal predictable body patterns.',
+      'Low energy after meals often says more about digestion than willpower.',
+      'The earlier the pattern is seen, the gentler the plan can be.'
+    ],
+    askTitle: 'Ask during a preventive visit',
+    askItems: [
+      'Which season tends to disturb my body most?',
+      'What is the smallest useful routine change for me?',
+      'Do I need Panchakarma, herbs, diet correction, or only monitoring right now?'
+    ],
+    related: ['panchakarma-detox-meaning-benefits', 'stress-sleep-burnout-ayurveda', 'how-to-choose-ayurveda-hospital-bangalore'],
+    sources: [
+      ['WHO: traditional and integrative medicine', 'https://www.who.int/health-topics/traditional-complementary-and-integrative-medicine'],
+      ['NCCIH: Ayurvedic medicine in depth', 'https://www.nccih.nih.gov/health/ayurvedic-medicine-in-depth']
+    ]
+  },
+  'how-to-choose-ayurveda-hospital-bangalore': {
+    inlineImage: '../ayurveda_consultation.png',
+    imageCaption: 'A good Ayurveda centre should feel warm, but the treatment process should still feel clear, qualified and accountable.',
+    rewardTitle: 'The trust checklist',
+    rewardItems: [
+      'The doctor explains why a therapy is chosen, not only what it is called.',
+      'The centre asks about reports, medicines, red flags and medical history.',
+      'Panchakarma is supervised and adjusted, not sold as a fixed menu.',
+      'The plan includes follow-up, diet and realistic timelines.'
+    ],
+    askTitle: 'Ask before committing to a plan',
+    askItems: [
+      'Who is supervising the treatment?',
+      'What changes should I expect by week two or three?',
+      'What would make you change the plan?'
+    ],
+    related: ['panchakarma-detox-meaning-benefits', 'seasonal-panchakarma-preventive-ayurveda', 'ayurvedic-treatment-for-disc-bulge-back-pain'],
+    sources: [
+      ['NCCIH: safety considerations for Ayurvedic medicine', 'https://www.nccih.nih.gov/health/ayurvedic-medicine-in-depth'],
+      ['WHO: traditional, complementary and integrative medicine', 'https://www.who.int/health-topics/traditional-complementary-and-integrative-medicine']
+    ]
+  }
+};
+
+function relatedPosts(post) {
+  return (postExtras[post.slug]?.related || [])
+    .map(slug => posts.find(item => item.slug === slug))
+    .filter(Boolean);
+}
+
 function head({ title, description, canonical, image, schema, assetPrefix = '../', type = 'article' }) {
   const imageUrl = image ? `${siteUrl}/${image.replace('../', '')}` : `${siteUrl}/Website%20Logo@3x.webp`;
   return `<!DOCTYPE html>
@@ -307,8 +532,53 @@ function footer(prefix = '../') {
 <script>lucide.createIcons({ attrs: { 'aria-hidden': 'true' } });</script>`;
 }
 
+function listBlock(title, items, icon = 'sparkles') {
+  return `<section class="rounded-2xl bg-white border border-brand-gold/15 p-6 sm:p-8 shadow-md shadow-brand-deep/5">
+                    <div class="flex items-center gap-3 mb-5">
+                        <span class="w-11 h-11 rounded-full bg-brand-gold-light text-brand-gold flex items-center justify-center"><i data-lucide="${icon}" class="w-5 h-5"></i></span>
+                        <h2 class="font-display text-3xl text-brand-darkest leading-tight">${esc(title)}</h2>
+                    </div>
+                    <ul class="grid gap-3">
+                        ${items.map(item => `<li class="flex gap-3 text-brand-charcoal-muted leading-relaxed">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 mt-1 shrink-0 text-brand-gold"></i>
+                            <span>${esc(item)}</span>
+                        </li>`).join('\n')}
+                    </ul>
+                </section>`;
+}
+
+function relatedBlock(post) {
+  const related = relatedPosts(post);
+  if (!related.length) return '';
+  return `<section class="rounded-2xl bg-[#eef4f0] border border-brand-gold/15 p-6 sm:p-8">
+                    <p class="text-xs font-bold uppercase tracking-[0.18em] text-brand-gold mb-4">Related reading</p>
+                    <div class="grid gap-4 sm:grid-cols-3">
+                        ${related.map(item => `<a href="${item.slug}.html" class="group rounded-lg bg-white border border-brand-gold/15 p-4 shadow-sm hover:border-brand-gold/45 transition-colors">
+                            <span class="text-xs font-bold uppercase tracking-[0.14em] text-brand-charcoal-muted">${esc(item.category)}</span>
+                            <span class="block mt-2 font-display text-xl leading-tight text-brand-darkest group-hover:text-brand-gold transition-colors">${esc(item.shortTitle)}</span>
+                        </a>`).join('\n')}
+                    </div>
+                </section>`;
+}
+
+function sourceBlock(post) {
+  const sources = postExtras[post.slug]?.sources || [];
+  if (!sources.length) return '';
+  return `<section class="rounded-2xl border border-brand-gold/15 p-6 sm:p-8 bg-white">
+                    <h2 class="font-display text-3xl text-brand-darkest">Useful references</h2>
+                    <p class="mt-3 text-brand-charcoal-muted leading-relaxed">These links are included for readers and search systems that want broader context. They do not replace a doctor-led consultation.</p>
+                    <ul class="mt-5 space-y-3">
+                        ${sources.map(([label, href]) => `<li class="flex gap-3">
+                            <i data-lucide="external-link" class="w-5 h-5 mt-0.5 shrink-0 text-brand-gold"></i>
+                            <a href="${href}" target="_blank" rel="noopener noreferrer" class="font-bold text-brand-gold hover:text-brand-deep transition-colors">${esc(label)}</a>
+                        </li>`).join('\n')}
+                    </ul>
+                </section>`;
+}
+
 function postHtml(post, index) {
   const canonical = `${siteUrl}/blog/${post.slug}.html`;
+  const extras = postExtras[post.slug] || {};
   const schema = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -330,7 +600,8 @@ function postHtml(post, index) {
         datePublished: slugDatePrefix(index),
         dateModified: published,
         author: { '@type': 'Organization', name: clinicName },
-        publisher: { '@type': 'Organization', name: clinicName }
+        publisher: { '@type': 'Organization', name: clinicName },
+        citation: (extras.sources || []).map(([, href]) => href)
       },
       {
         '@type': 'FAQPage',
@@ -371,10 +642,18 @@ ${nav('../')}
             </aside>
 
             <div class="space-y-10">
-                ${post.sections.map(([heading, body]) => `<section>
+                ${post.sections.map(([heading, body], sectionIndex) => `<section>
                     <h2 class="font-display text-3xl text-brand-darkest leading-tight">${esc(heading)}</h2>
                     <p class="mt-4 text-base sm:text-lg leading-relaxed text-brand-charcoal-muted">${esc(body)}</p>
-                </section>`).join('\n')}
+                </section>
+                ${sectionIndex === 0 && extras.rewardItems ? listBlock(extras.rewardTitle, extras.rewardItems, 'lightbulb') : ''}
+                ${sectionIndex === 1 && extras.inlineImage ? `<figure class="rounded-2xl overflow-hidden bg-white border border-brand-gold/15 shadow-md shadow-brand-deep/5">
+                    <img src="${extras.inlineImage}" alt="${esc(extras.imageCaption || post.shortTitle)}" class="w-full aspect-[16/9] object-cover" loading="lazy">
+                    <figcaption class="px-5 py-4 text-sm text-brand-charcoal-muted border-t border-brand-gold/10">${esc(extras.imageCaption || '')}</figcaption>
+                </figure>` : ''}
+                ${sectionIndex === 2 && extras.askItems ? listBlock(extras.askTitle, extras.askItems, 'clipboard-list') : ''}`).join('\n')}
+
+                ${relatedBlock(post)}
 
                 <section class="rounded-2xl bg-white border border-brand-gold/15 p-6 sm:p-8 shadow-md shadow-brand-deep/5">
                     <h2 class="font-display text-3xl text-brand-darkest">Questions patients often ask</h2>
@@ -391,6 +670,8 @@ ${nav('../')}
                     <p class="mt-3 text-brand-gold-light/80 leading-relaxed">Bring your reports, symptom timeline and current medicines. A consultation helps connect the diagnosis with your digestion, sleep, stress and recovery pattern.</p>
                     <a href="../index.html#book" class="mt-6 inline-flex items-center gap-2 rounded-full bg-brand-gold text-brand-darkest px-6 py-3 font-bold">Book Consultation <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
                 </section>
+
+                ${sourceBlock(post)}
             </div>
         </div>
     </article>
@@ -449,12 +730,15 @@ ${footer('./')}
 }
 
 function markdownFor(post, index) {
+  const extras = postExtras[post.slug] || {};
+  const related = relatedPosts(post);
   return `---
 title: "${post.title.replace(/"/g, '\\"')}"
 description: "${post.description.replace(/"/g, '\\"')}"
 category: "${post.category}"
 date: "${slugDatePrefix(index)}"
 image: "${post.image}"
+inline_image: "${extras.inlineImage || ''}"
 keywords:
 ${post.keywords.map(k => `  - "${k}"`).join('\n')}
 ---
@@ -467,9 +751,25 @@ ${post.takeaway}
 
 ${post.sections.map(([heading, body]) => `## ${heading}\n\n${body}`).join('\n\n')}
 
+## ${extras.rewardTitle || 'What to notice'}
+
+${(extras.rewardItems || []).map(item => `- ${item}`).join('\n')}
+
+## ${extras.askTitle || 'Questions to ask'}
+
+${(extras.askItems || []).map(item => `- ${item}`).join('\n')}
+
+## Related reading
+
+${related.map(item => `- [${item.title}](../../blog/${item.slug}.html)`).join('\n')}
+
 ## Questions patients often ask
 
 ${post.faqs.map(([q, a]) => `### ${q}\n\n${a}`).join('\n\n')}
+
+## Useful references
+
+${(extras.sources || []).map(([label, href]) => `- [${label}](${href})`).join('\n')}
 `;
 }
 
@@ -603,11 +903,11 @@ function addBlogLink(file) {
   const desktopBlog = '<a href="blog.html" class="nav-link hover:text-brand-deep transition-colors cursor-pointer-target">Blog</a>';
   html = html.replace(/<a href="blog\.html"[^>]*>Blog<\/a>/g, '');
   html = html.replace(
-    /(<a href="doctors\.html" class="mobile-nav-link[^"]*">Doctors<\/a>\s*)(<a href="corporate-wellness\.html" class="mobile-nav-link)/g,
+    /(<a href="doctors\.html" class="mobile-nav-link[^"]*">Doctors<\/a>)(?:\s*\n\s*)*(<a href="corporate-wellness\.html" class="mobile-nav-link)/g,
     `$1\n            ${mobileBlog}\n            $2`
   );
   html = html.replace(
-    /(<a href="doctors\.html" class="nav-link[^"]*">Doctors<\/a>\s*)(<a href="corporate-wellness\.html" class="nav-link)/g,
+    /(<a href="doctors\.html" class="nav-link[^"]*">Doctors<\/a>)(?:\s*\n\s*)*(<a href="corporate-wellness\.html" class="nav-link)/g,
     `$1\n                ${desktopBlog}\n                $2`
   );
   if (!html.includes('rel="canonical"')) {

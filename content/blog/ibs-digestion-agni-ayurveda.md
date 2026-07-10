@@ -4,6 +4,7 @@ description: "Understand Agni in Ayurveda and how it relates to IBS, bloating, a
 category: "Digestive Health"
 date: "2026-07-15"
 image: "../assets/conditions/digestive-disorders.jpg"
+inline_image: "../condition_digestive.png"
 keywords:
   - "IBS Ayurveda Bangalore"
   - "Agni Ayurveda digestion"
@@ -33,6 +34,25 @@ Care may include meal timing, warm cooked food, herbs for digestion, bowel corre
 
 The best diet is not only about what is healthy. It is about what your current digestion can actually handle.
 
+## The Agni check-in
+
+- Do you feel hungry at regular times, or only when food is in front of you?
+- Do symptoms worsen after raw foods, late dinners, dairy, fried foods or stress?
+- Is the main problem burning, gas, heaviness, urgency or constipation?
+- Can you identify your safest meal when digestion is disturbed?
+
+## Ask this before taking herbs
+
+- Is my digestion too sharp, too weak, too slow, or too irregular?
+- Which two food changes should I start with first?
+- When should I seek testing for persistent digestive symptoms?
+
+## Related reading
+
+- [Panchakarma Detox: What It Really Means in Ayurveda](../../blog/panchakarma-detox-meaning-benefits.html)
+- [Acne, Eczema and Psoriasis: How Ayurveda Reads the Skin](../../blog/ayurvedic-treatment-for-acne-eczema-psoriasis.html)
+- [Stress, Sleep and Burnout: An Ayurvedic Way to Reset the Nervous System](../../blog/stress-sleep-burnout-ayurveda.html)
+
 ## Questions patients often ask
 
 ### Can Ayurveda help IBS?
@@ -46,3 +66,7 @@ Often heat is involved, but the full pattern must be assessed. Stress and irregu
 ### Should I avoid all spicy food?
 
 Not always. The answer depends on your symptoms, constitution and digestive strength.
+
+## Useful references
+
+- [NCCIH: Ayurvedic medicine overview](https://www.nccih.nih.gov/health/ayurvedic-medicine-in-depth)
