@@ -532,6 +532,7 @@ function footer(prefix = '../') {
             <div class="flex flex-wrap gap-5 text-sm text-brand-sage">
                 <a href="${prefix}index.html" class="hover:text-brand-gold transition-colors">Home</a>
                 <a href="${prefix}treatments.html" class="hover:text-brand-gold transition-colors">Treatments</a>
+                <a href="${prefix}treatments.html" class="hover:text-brand-gold transition-colors">Pain Management</a>
                 <a href="${prefix}doctors.html" class="hover:text-brand-gold transition-colors">Doctors</a>
                 <a href="${prefix}blog.html" class="hover:text-brand-gold transition-colors">Blog</a>
                 <a href="https://wa.me/919871731008" class="hover:text-brand-gold transition-colors">WhatsApp</a>
